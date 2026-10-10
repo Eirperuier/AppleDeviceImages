@@ -4,32 +4,39 @@ import Testing
 
 @Suite struct GenerationTests {
     @Test(arguments: [
-        (OSGeneration.Platform.iOS, "12.0", 8), (.iOS, "15.6.1", 11), (.iOS, "18.2", 14), (.iOS, "26.1", 15),
-        (.macOS, "10.14", 8), (.macOS, "13.4", 12), (.macOS, "15.0", 14), (.macOS, "26.0", 15),
-        (.watchOS, "5.0", 8), (.watchOS, "10.6", 13), (.watchOS, "26.0", 15),
-        (.tvOS, "16.0", 12), (.visionOS, "1.0", 13), (.visionOS, "26.0", 15), (.iOS, "27.0", 16),
+        (OSGeneration.Platform.iOS, "8.4", "4.0"), (.iOS, "12.0", "8.0"), (.iOS, "15.6.1", "11.0"), (.iOS, "18.2", "14.0"),
+        (.iOS, "26.1", "15.0"), (.iOS, "27.0.1", "27.0"), (.iOS, "28.0", "28.0"),
+        (.macOS, "10.14", "8.0"), (.macOS, "13.4", "12.0"), (.macOS, "15.0", "14.0"), (.macOS, "26.0", "15.0"),
+        (.macOS, "27.0", "27.0"), (.watchOS, "5.0", "8.0"), (.watchOS, "10.6", "13.0"), (.watchOS, "26.0", "15.0"),
+        (.watchOS, "27.0", "27.0"), (.tvOS, "16.0", "12.0"), (.visionOS, "1.0", "13.0"), (.visionOS, "26.0", "15.0"),
     ])
-    func versionGivesGeneration(platform: OSGeneration.Platform, version: String, generation: Int) {
-        #expect(OSGeneration(platform, version)?.rawValue == generation)
+    func versionGivesTheCDNFolder(platform: OSGeneration.Platform, version: String, folder: String) {
+        #expect(OSGeneration(platform, version)?.description == folder)
     }
 
     @Test(arguments: [
-        ("iPhone18,1", "18.6", 14), ("Watch7,1", "10.0", 13), ("Mac16,1", "15.2", 14),
-        ("AppleTV14,1", "17.0", 13), ("RealityDevice14,1", "2.0", 14), ("iPad16,3", "26.0", 15),
+        ("iPhone18,1", "18.6", "14.0"), ("Watch7,1", "10.0", "13.0"), ("Mac16,1", "15.2", "14.0"),
+        ("AppleTV14,1", "17.0", "13.0"), ("RealityDevice14,1", "2.0", "14.0"), ("iPad16,3", "26.0", "15.0"),
+        ("Mac18,5", "27.0", "27.0"),
     ])
-    func theModelTellsWhichOSTheVersionIsOf(model: String, version: String, generation: Int) {
-        #expect(AppleDevice(model, osVersion: version).generation?.rawValue == generation)
+    func theModelTellsWhichOSTheVersionIsOf(model: String, version: String, folder: String) {
+        #expect(AppleDevice(model, osVersion: version).generation?.description == folder)
     }
 
     @Test func theDevicesGenerationComesFirstThenOlderThenNewer() {
-        let order = AppleDevice("Mac15,6", osVersion: "14.1").generationOrder
-        #expect(order.map(\.rawValue) == [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 14, 15, 16])
+        let order = AppleDevice("Mac15,6", osVersion: "14.1").generationOrder.map(\.description)
+        #expect(Array(order.prefix(13)) == ["13.0", "12.0", "11.0", "10.0", "9.0", "8.0", "7.0", "6.0", "5.0", "4.0", "14.0", "15.0", "27.0"])
     }
 
-    @Test func noVersionStartsAfterTheNewestKnown() {
+    @Test func noVersionStartsAtTheNewest() {
         let order = AppleDevice("Mac15,6").generationOrder
-        #expect(order.first?.rawValue == OSGeneration.newestKnown.rawValue + 1)
-        #expect(order.last?.rawValue == 1)
+        #expect(order.first! >= OSGeneration.newestKnown)
+        #expect(order.last == OSGeneration.oldest)
+    }
+
+    @Test func aVersionNewerThanAnyKnownIsTriedFirst() {
+        let order = AppleDevice("iPhone18,1", osVersion: "29.0").generationOrder.map(\.description)
+        #expect(Array(order.prefix(4)) == ["29.0", "28.0", "27.0", "15.0"])
     }
 }
 
@@ -74,7 +81,7 @@ import Testing
 
     @Test func airPodsGoByProductID() {
         let urls = AppleDevice("Device1,8212").imageURLCandidates(scale: 1).map(\.absoluteString)
-        #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-16.0/AirPods/AirPods_8212/online-infobox.png")
+        #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-27.0/AirPods/AirPods_8212/online-infobox.png")
         #expect(urls.suffix(2) == [
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8212/online-infobox.png",
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/Beats_8212/online-infobox.png",
@@ -104,10 +111,12 @@ struct NetworkTests {
         (AppleDevice("Watch7,1", color: "AlmPink", osVersion: "11.0"),
          "appleid.cdn-apple.com/static/deviceImages-14.0/Watch/Watch7,1-AlmPink/"),
         (AppleDevice("Watch7,1"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Watch/Watch7,1/"),
-        // Generation 16 has no images yet, so the newest before it serves.
-        (AppleDevice("AppleTV14,1", osVersion: "27.0"), "appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/"),
-        (AppleDevice("Device1,8212"), "appleid.cdn-apple.com/static/deviceImages-15.0/AirPods/AirPods_8212/"),
-        (AppleDevice("Device1,8240"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8240/"),
+        (AppleDevice("AppleTV14,1", osVersion: "26.0"), "appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/"),
+        (AppleDevice("AppleTV14,1", osVersion: "27.0"), "appleid.cdn-apple.com/static/deviceImages-27.0/AppleTV/AppleTV14,1/"),
+        // No 28 images yet, so the newest before it serves.
+        (AppleDevice("Mac18,5", osVersion: "28.0"), "appleid.cdn-apple.com/static/deviceImages-27.0/Mac/Mac18,5/"),
+        (AppleDevice("Device1,8212"), "appleid.cdn-apple.com/static/deviceImages-27.0/AirPods/AirPods_8212/"),
+        (AppleDevice("Device1,8245"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8245/"),
     ])
     func findsTheImage(device: AppleDevice, expectedPrefix: String) async throws {
         let url = try await device.imageURL()

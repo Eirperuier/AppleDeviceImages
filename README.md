@@ -3,14 +3,14 @@
 The picture of a specific Apple product: its model, its color, and the wallpaper of the OS it runs. These are the same images Settings shows in your Apple Account's device list.
 
 <p align="center">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png" height="110" alt="iPhone 17 Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png" height="110" alt="iPhone 17 Pro">
   <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/iPad/iPad16,3/online-infobox__3x.png" height="110" alt="iPad Pro">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Mac/Mac16,1/online-infobox__3x.png" height="110" alt="MacBook Pro">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Watch/Watch7,1-AlmPink/online-infobox__3x.png" height="110" alt="Apple Watch Series 9">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/AirPods/AirPods_8212/online-infobox__3x.png" height="110" alt="AirPods Pro">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/online-infobox__3x.png" height="110" alt="Apple TV 4K">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/Mac/Mac16,1/online-infobox__3x.png" height="110" alt="MacBook Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/Watch/Watch7,1-AlmPink/online-infobox__3x.png" height="110" alt="Apple Watch Series 9">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/AirPods/AirPods_8212/online-infobox__3x.png" height="110" alt="AirPods Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/AppleTV/AppleTV14,1/online-infobox__3x.png" height="110" alt="Apple TV 4K">
   <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1/online-infobox__3x.png" height="110" alt="HomePod mini">
-  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/RealityDevice/RealityDevice14,1/online-infobox__3x.png" height="110" alt="Apple Vision Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/RealityDevice/RealityDevice14,1/online-infobox__3x.png" height="110" alt="Apple Vision Pro">
 </p>
 
 ```swift
@@ -39,7 +39,7 @@ AppleDeviceImage("Mac16,1")                       // resizable, fits its frame
 
 AppleDeviceImage(.current)                        // the device it runs on
 
-AppleDeviceImage(AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.1"))
+AppleDeviceImage(AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "27.0"))
 ```
 
 `AppleDeviceImage` works like `AsyncImage`. You can shape the image and choose what shows while it loads:
@@ -55,7 +55,7 @@ AppleDeviceImage("Watch7,1", size: .small) { image in
 ### Anywhere else
 
 ```swift
-let device = AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.1")
+let device = AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "27.0")
 
 let image = try await device.image()    // UIImage, or NSImage on macOS
 let png   = try await device.imageData()
@@ -68,7 +68,7 @@ let url   = try await device.imageURL()
 |---|---|---|
 | `model` | `"iPhone18,1"`, `"Mac16,1"`, `"Watch7,1"`, `"Device1,8212"` | The model identifier; for AirPods and Beats, `Device1,` plus the Bluetooth product ID |
 | `color` | `"3b3b3c-47ade5"`, `"AlmPink"`, `"1-9"` | Optional. Any of Apple's color codes ([below](#colors)); leave it out for the default color |
-| `osVersion` | `"26.1"`, `"18.6"` | Optional. Picks the wallpaper; leave it out for the newest |
+| `osVersion` | `"27.0"`, `"18.6"` | Optional. Picks the wallpaper; leave it out for the newest |
 
 `AppleDevice.current` fills in this device's model and OS version.
 
@@ -98,11 +98,19 @@ Apple renders each device with the wallpaper of the OS it runs. Pass `osVersion`
     <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-13.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 14</td>
     <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 15</td>
     <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 26</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 27</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png" width="100"><br>iOS 26</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png" width="100"><br>iOS 27</td>
   </tr>
 </table>
 
 ```swift
-AppleDevice("iPhone11,8", color: "3b3b3c-dcdede", osVersion: "16.0")   // the third-from-right image above
+AppleDevice("iPhone11,8", color: "3b3b3c-dcdede", osVersion: "16.0")   // the iOS 16 image above
 ```
 
 ## Colors
@@ -143,16 +151,18 @@ Two CDNs serve these images.
 ### Apple's account CDN (what Settings shows)
 
 ```
-https://appleid.cdn-apple.com/static/deviceImages-<generation>.0/<Family>/<Model>[-<color>]/online-{sourcelist,infobox}[__2x|__3x].png
+https://appleid.cdn-apple.com/static/deviceImages-<version>/<Family>/<Model>[-<color>]/online-{sourcelist,infobox}[__2x|__3x].png
 ```
 
-`<generation>` is the OS release year minus 2010, the same on every platform:
+`<version>` names the year of the OS release, the same on every platform:
 
-| Generation | 8 | 12 | 14 | 15 |
-|---|---|---|---|---|
-| Releases | 2018: iOS 12, macOS 10.14, watchOS 5 | 2022: iOS 16, macOS 13, tvOS 16 | 2024: iOS 18, macOS 15 | 2025: the "26" releases |
+| Year | 2014–2024 | 2025 | 2026 on |
+|---|---|---|---|
+| Folder | the year − 2010: `4.0` (iOS 8) … `8.0` (iOS 12, macOS 10.14, watchOS 5) … `14.0` (iOS 18, macOS 15) | `15.0` (the 26 releases) | the OS version: `27.0`, presumably `28.0`, … |
 
-A device has images from the generation it launched in onward. Generations past its last OS repeat its last image.
+There is no `16.0` to `26.0`. Devices launched in 2026, such as the Mac mini `Mac18,5`, only appear under `27.0`.
+
+A device has images from the year it launched in onward. Years past its last OS repeat its last image, so an iPhone XR under `27.0` shows its iOS 18 picture.
 
 The families are:
 - `iPhone`, `iPad`, `iPod`, `Watch`, `AppleTV`, `RealityDevice`
@@ -174,7 +184,7 @@ There is one image per model and color, with no OS wallpapers. Macs are filed by
 
 `device.imageURLCandidates()` lists every URL the image may be at, best first:
 
-1. The account CDN at the device's generation, then older generations, then newer ones.
+1. The account CDN at the device's OS year, then older years, then newer ones. "Newer" reaches the newest year this package knows (2026) or the year of the OS it runs on, whichever is later. Without an OS version, the newest year comes first. So images for a new OS are picked up as soon as Apple publishes them, provided Apple keeps naming folders after the OS version.
 2. Find My in the device's color, then in the default color.
 
 `image()`, `imageData()` and `imageURL()` try them in order and keep the result for the next call.

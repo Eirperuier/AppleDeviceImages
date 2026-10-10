@@ -75,14 +75,17 @@ extension AppleDevice {
         #endif
     }
 
-    /// The device's generation first, then older ones, then newer ones up to one past the newest known.
+    /// The device's generation first, then older ones, then newer ones up to the newest this package or the
+    /// system it runs on knows; without an OS version, the newest first.
     var generationOrder: [OSGeneration] {
-        let newest = OSGeneration.newestKnown.rawValue + 1
-        let start = min(max(generation?.rawValue ?? newest, 1), newest)
-        let older = stride(from: start, through: 1, by: -1)
-        let newer = (start + 1)..<(newest + 1)
-        return (Array(older) + Array(newer)).map(OSGeneration.init(rawValue:))
+        let newest = [OSGeneration.newestKnown, Self.runningGeneration, generation].compactMap { $0 }.max()!.year
+        let start = max(generation?.year ?? newest, OSGeneration.oldest.year)
+        let older = stride(from: start, through: OSGeneration.oldest.year, by: -1)
+        let newer = start < newest ? Array((start + 1)...newest) : []
+        return (Array(older) + newer).map(OSGeneration.init(year:))
     }
+
+    private static let runningGeneration = AppleDevice.current.generation
 }
 
 public enum AppleDeviceImageError: Error, Sendable {

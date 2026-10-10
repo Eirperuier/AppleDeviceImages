@@ -1,25 +1,23 @@
 import Foundation
 
-/// The yearly generation of Apple's operating systems, which picks the wallpaper a device image shows.
+/// A year's OS releases, whose wallpaper a device image shows.
 ///
-/// Apple's account image CDN keeps one folder per generation (`deviceImages-15.0`), shared by every
-/// platform: generation 8 is 2018 (iOS 12, macOS 10.14, watchOS 5), 14 is 2024 (iOS 18, macOS 15),
-/// 15 is 2025 (the "26" releases). A device has images from its launch generation on; generations after its
+/// Apple's account image CDN keeps one folder per year, shared by every platform: `8.0` for 2018 (iOS 12,
+/// macOS 10.14, watchOS 5) up to `14.0` for 2024 (iOS 18, macOS 15), `15.0` for 2025 (the 26 releases), and
+/// from 2026 on the OS version itself (`27.0`). A device has images from its launch year on; years after its
 /// last OS repeat its last image.
-struct OSGeneration: RawRepresentable, Comparable, Hashable, Sendable, CustomStringConvertible {
-    var rawValue: Int
+struct OSGeneration: Comparable, Hashable, Sendable, CustomStringConvertible {
+    var year: Int
 
-    init(rawValue: Int) {
-        self.rawValue = rawValue
-    }
-
-    /// The generation of the releases Apple shipped in `year`.
     init(year: Int) {
-        self.rawValue = year - 2010
+        self.year = year
     }
 
-    /// The newest generation seen on Apple's CDN when this package was last checked.
-    static let newestKnown = OSGeneration(rawValue: 15)
+    /// The oldest year the account CDN has images for (iOS 8).
+    static let oldest = OSGeneration(year: 2014)
+
+    /// The newest year seen on Apple's CDN when this package was last checked.
+    static let newestKnown = OSGeneration(year: 2026)
 
     /// The generation of an operating system release, or nil for a version that predates the scheme.
     init?(_ platform: Platform, _ version: OperatingSystemVersion) {
@@ -36,10 +34,13 @@ struct OSGeneration: RawRepresentable, Comparable, Hashable, Sendable, CustomStr
     }
 
     static func < (lhs: OSGeneration, rhs: OSGeneration) -> Bool {
-        lhs.rawValue < rhs.rawValue
+        lhs.year < rhs.year
     }
 
-    var description: String { "\(rawValue).0" }
+    /// The CDN folder's version: `14.0`, `15.0`, `27.0`.
+    var description: String {
+        year <= 2025 ? "\(year - 2010).0" : "\(year - 1999).0"
+    }
 
     /// An Apple operating system, for turning its version into a generation.
     enum Platform: Sendable {
