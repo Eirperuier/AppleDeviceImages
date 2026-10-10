@@ -13,52 +13,67 @@ import Testing
         #expect(OSGeneration(platform, version)?.rawValue == generation)
     }
 
-    @Test func requestedGenerationComesFirstThenOlderThenNewer() {
-        let order = DeviceImageRequest(model: "Mac15,6", generation: OSGeneration(rawValue: 13)).generationOrder
+    @Test(arguments: [
+        ("iPhone18,1", "18.6", 14), ("Watch7,1", "10.0", 13), ("Mac16,1", "15.2", 14),
+        ("AppleTV14,1", "17.0", 13), ("RealityDevice14,1", "2.0", 14), ("iPad16,3", "26.0", 15),
+    ])
+    func theModelTellsWhichOSTheVersionIsOf(model: String, version: String, generation: Int) {
+        #expect(AppleDevice(model, osVersion: version).generation?.rawValue == generation)
+    }
+
+    @Test func theDevicesGenerationComesFirstThenOlderThenNewer() {
+        let order = AppleDevice("Mac15,6", osVersion: "14.1").generationOrder
         #expect(order.map(\.rawValue) == [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 14, 15, 16])
     }
 
-    @Test func noGenerationStartsAfterTheNewestKnown() {
-        let order = DeviceImageRequest(model: "Mac15,6").generationOrder
+    @Test func noVersionStartsAfterTheNewestKnown() {
+        let order = AppleDevice("Mac15,6").generationOrder
         #expect(order.first?.rawValue == OSGeneration.newestKnown.rawValue + 1)
         #expect(order.last?.rawValue == 1)
     }
 }
 
+@Suite struct ColorTests {
+    @Test(arguments: [
+        ("3b3b3c-47ade5", "3b3b3c-47ade5", nil), ("#3B3B3C-#47ADE5", "3b3b3c-47ade5", nil),
+        ("1-9-0", nil, "1-9-0"), ("1-9", nil, "1-9-0"),
+        ("AlmPink", "AlmPink", "AlmPink"), ("", nil, nil),
+    ] as [(String, String?, String?)])
+    func aCodeGoesToTheCDNThatReadsIt(code: String, account: String?, findMy: String?) {
+        #expect(DeviceColor(code: code) == DeviceColor(account: account, findMy: findMy))
+    }
+}
+
 @Suite struct CandidateTests {
     @Test func iPhoneInAColorTriesTheAccountCDNThenFindMy() {
-        let request = DeviceImageRequest(
-            model: "iPhone18,1",
-            color: DeviceColor(deviceColor: 1, enclosureColor: 9, account: "3b3b3c-47ade5"),
-            generation: OSGeneration(rawValue: 15)
-        )
-        let urls = request.candidateURLs.map(\.absoluteString)
+        let urls = AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.0").imageURLCandidates(scale: 3)
+            .map(\.absoluteString)
         #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-15.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png")
-        #expect(urls.suffix(2) == [
+        #expect(urls.last == "https://statici.icloud.com/fmipmobile/deviceImages-9.0/iPhone/iPhone18,1/online-infobox__3x.png")
+    }
+
+    @Test func aFindMyColorIsTriedBeforeTheDefault() {
+        let urls = AppleDevice("iPhone18,1", color: "1-9").imageURLCandidates(scale: 3).map(\.absoluteString)
+        #expect(urls == [
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/iPhone/iPhone18,1-1-9-0/online-infobox__3x.png",
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/iPhone/iPhone18,1/online-infobox__3x.png",
         ])
     }
 
-    @Test func iPhoneWithoutAnAccountColorGoesStraightToFindMy() {
-        let urls = DeviceImageRequest(model: "iPhone18,1").candidateURLs
-        #expect(urls.allSatisfy { $0.host == "statici.icloud.com" })
-    }
-
     @Test func newMacsAreUnderMacOnTheAccountCDNAndTheirFamilyOnFindMy() {
-        let urls = DeviceImageRequest(model: "Mac16,1", generation: OSGeneration(rawValue: 14), style: .list, scale: 2)
-            .candidateURLs.map(\.absoluteString)
+        let urls = AppleDevice("Mac16,1", osVersion: "15.0").imageURLCandidates(size: .small, scale: 2)
+            .map(\.absoluteString)
         #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac16,1/online-sourcelist__2x.png")
         #expect(urls.first { $0.contains("statici") } == "https://statici.icloud.com/fmipmobile/deviceImages-9.0/MacBookPro/Mac16,1/online-sourcelist__2x.png")
     }
 
     @Test func anUnknownMacTriesEveryFamily() {
-        let findMy = DeviceImageRequest(model: "Mac99,1").candidateURLs.filter { $0.host == "statici.icloud.com" }
+        let findMy = AppleDevice("Mac99,1").imageURLCandidates().filter { $0.host == "statici.icloud.com" }
         #expect(findMy.count == 8)
     }
 
     @Test func airPodsGoByProductID() {
-        let urls = DeviceImageRequest(model: "Device1,8212", scale: 1).candidateURLs.map(\.absoluteString)
+        let urls = AppleDevice("Device1,8212").imageURLCandidates(scale: 1).map(\.absoluteString)
         #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-16.0/AirPods/AirPods_8212/online-infobox.png")
         #expect(urls.suffix(2) == [
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8212/online-infobox.png",
@@ -66,9 +81,15 @@ import Testing
         ])
     }
 
-    @Test func homePodIsFiledUnderHomePod() {
-        let urls = DeviceImageRequest(model: "AudioAccessory5,1").candidateURLs.map(\.absoluteString)
+    @Test func homePodWithoutAColorGoesToFindMy() {
+        let urls = AppleDevice("AudioAccessory5,1").imageURLCandidates(scale: 3).map(\.absoluteString)
         #expect(urls == ["https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1/online-infobox__3x.png"])
+    }
+
+    @Test func theCurrentDeviceHasAModelAndVersion() {
+        let device = AppleDevice.current
+        #expect(!device.model.isEmpty)
+        #expect(device.generation != nil)
     }
 }
 
@@ -76,30 +97,28 @@ import Testing
 @Suite(.enabled(if: ProcessInfo.processInfo.environment["APPLE_DEVICE_IMAGES_NETWORK"] == "1"))
 struct NetworkTests {
     @Test(arguments: [
-        (DeviceImageRequest(model: "iPhone18,1", color: DeviceColor(account: "3b3b3c-47ade5"), generation: OSGeneration(rawValue: 15)),
+        (AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.0"),
          "appleid.cdn-apple.com/static/deviceImages-15.0/iPhone/iPhone18,1-3b3b3c-47ade5/"),
-        (DeviceImageRequest(model: "iPhone18,1"), "statici.icloud.com/fmipmobile/deviceImages-9.0/iPhone/iPhone18,1/"),
-        (DeviceImageRequest(model: "Mac15,6", generation: OSGeneration(rawValue: 14)),
-         "appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac15,6/"),
-        (DeviceImageRequest(model: "Watch7,1", color: DeviceColor(account: "AlmPink"), generation: OSGeneration(.watchOS, "11.0")),
+        (AppleDevice("iPhone18,1"), "statici.icloud.com/fmipmobile/deviceImages-9.0/iPhone/iPhone18,1/"),
+        (AppleDevice("Mac15,6", osVersion: "15.1"), "appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac15,6/"),
+        (AppleDevice("Watch7,1", color: "AlmPink", osVersion: "11.0"),
          "appleid.cdn-apple.com/static/deviceImages-14.0/Watch/Watch7,1-AlmPink/"),
-        // Generation 16 doesn't exist yet, so the newest one before it serves.
-        (DeviceImageRequest(model: "AppleTV14,1", generation: OSGeneration(rawValue: 16)),
-         "appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/"),
-        (DeviceImageRequest(model: "Watch7,1"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Watch/Watch7,1/"),
-        (DeviceImageRequest(model: "AppleTV14,1"), "appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/"),
-        (DeviceImageRequest(model: "Device1,8212"), "appleid.cdn-apple.com/static/deviceImages-15.0/AirPods/AirPods_8212/"),
-        (DeviceImageRequest(model: "Device1,8240"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8240/"),
+        (AppleDevice("Watch7,1"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Watch/Watch7,1/"),
+        // Generation 16 has no images yet, so the newest before it serves.
+        (AppleDevice("AppleTV14,1", osVersion: "27.0"), "appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/"),
+        (AppleDevice("Device1,8212"), "appleid.cdn-apple.com/static/deviceImages-15.0/AirPods/AirPods_8212/"),
+        (AppleDevice("Device1,8240"), "statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8240/"),
     ])
-    func findsTheImage(request: DeviceImageRequest, expectedPrefix: String) async throws {
-        let (url, data) = try await DeviceImageLoader().image(for: request)
+    func findsTheImage(device: AppleDevice, expectedPrefix: String) async throws {
+        let url = try await device.imageURL()
         #expect(url.absoluteString.hasPrefix("https://" + expectedPrefix))
-        #expect(data.starts(with: [0x89, 0x50, 0x4E, 0x47]))
+        let image = try await device.image()
+        #expect(image.size.width > 0)
     }
 
     @Test func aModelNoCDNHasIsNotFound() async {
-        await #expect(throws: DeviceImageError.self) {
-            try await DeviceImageLoader().image(for: DeviceImageRequest(model: "Device1,1106", generation: OSGeneration(rawValue: 15)))
+        await #expect(throws: AppleDeviceImageError.self) {
+            try await AppleDevice("Device1,1106", osVersion: "26.0").imageData()
         }
     }
 }
@@ -107,11 +126,11 @@ struct NetworkTests {
 #if os(macOS)
 @Suite struct SystemIconTests {
     @Test func knownModelHasAnIcon() {
-        #expect(SystemDeviceIcon.image(forModel: "iPhone15,2") != nil)
+        #expect(AppleDevice("iPhone15,2").systemIcon != nil)
     }
 
     @Test func unknownModelHasNone() {
-        #expect(SystemDeviceIcon.image(forModel: "NotADevice9,9") == nil)
+        #expect(AppleDevice("NotADevice9,9").systemIcon == nil)
     }
 }
 #endif

@@ -33,6 +33,25 @@ struct Product: Hashable, Sendable {
         }
     }
 
+    /// The operating system whose version picks this product's wallpaper.
+    var platform: OSGeneration.Platform? {
+        switch kind {
+        case .mac: .macOS
+        case .homePod: .audioOS
+        case .audio: nil
+        case .named(let family):
+            switch family {
+            case "iPhone", "iPod": .iOS
+            case "iPad": .iPadOS
+            case "Watch": .watchOS
+            case "AppleTV": .tvOS
+            case "RealityDevice": .visionOS
+            case _ where family.hasPrefix("Mac") || family.hasPrefix("iMac"): .macOS
+            default: nil
+            }
+        }
+    }
+
     /// Whether the account CDN only has this product in a color: iPhone, iPad, iPod, Apple Watch and HomePod.
     var accountNeedsColor: Bool {
         switch kind {

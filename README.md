@@ -1,109 +1,195 @@
 # AppleDeviceImages
 
-Images of a specific Apple product (model, color, and the wallpaper of the OS it runs) as Settings shows them in the Apple Account device list, from the CDNs Apple's own apps use.
+The picture of a specific Apple product: its model, its color, and the wallpaper of the OS it runs. These are the same images Settings shows in your Apple Account's device list.
+
+<p align="center">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/iPhone/iPhone18,1-3b3b3c-47ade5/online-infobox__3x.png" height="110" alt="iPhone 17 Pro">
+  <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/iPad/iPad16,3/online-infobox__3x.png" height="110" alt="iPad Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Mac/Mac16,1/online-infobox__3x.png" height="110" alt="MacBook Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Watch/Watch7,1-AlmPink/online-infobox__3x.png" height="110" alt="Apple Watch Series 9">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/AirPods/AirPods_8212/online-infobox__3x.png" height="110" alt="AirPods Pro">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/AppleTV/AppleTV14,1/online-infobox__3x.png" height="110" alt="Apple TV 4K">
+  <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1/online-infobox__3x.png" height="110" alt="HomePod mini">
+  <img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/RealityDevice/RealityDevice14,1/online-infobox__3x.png" height="110" alt="Apple Vision Pro">
+</p>
+
+```swift
+AppleDeviceImage("iPhone18,1")
+```
+
+## Installation
+
+Add the package in Xcode (File › Add Package Dependencies…) or in `Package.swift`:
+
+```swift
+.package(url: "https://github.com/Eirperuier/AppleDeviceImages.git", from: "0.1.0")
+```
+
+It runs on iOS 15, macOS 12, tvOS 15, watchOS 8 and visionOS 1 or later.
+
+## Usage
+
+### SwiftUI
 
 ```swift
 import AppleDeviceImages
 
-let request = DeviceImageRequest(
-    model: "iPhone18,1",
-    color: DeviceColor(deviceColor: 1, enclosureColor: 9, account: "3b3b3c-47ade5"),
-    generation: OSGeneration(.iOS, "26.1"),
-    style: .infobox,
-    scale: 3
-)
-let (url, png) = try await DeviceImageLoader.shared.image(for: request)
+AppleDeviceImage("Mac16,1")                       // resizable, fits its frame
+    .frame(width: 120)
+
+AppleDeviceImage(.current)                        // the device it runs on
+
+AppleDeviceImage(AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.1"))
 ```
 
-On macOS, `SystemDeviceIcon.image(forModel: "iPhone18,1")` returns the system's own 1024 px icon offline.
+`AppleDeviceImage` works like `AsyncImage`. You can shape the image and choose what shows while it loads:
 
-> [!IMPORTANT]
-> Neither CDN is a documented API, and the images belong to Apple. They can change or disappear without notice. Check that your use is allowed before shipping it.
-
-## Where the images come from
-
-### Account CDN: the Settings device list
-
-```
-https://appleid.cdn-apple.com/static/deviceImages-<generation>.0/<Family>/<Model>[-<color>]/online-<style>[__2x|__3x].png
+```swift
+AppleDeviceImage("Watch7,1", size: .small) { image in
+    image.resizable().scaledToFit().shadow(radius: 2)
+} placeholder: {
+    Color.secondary.opacity(0.1)
+}
 ```
 
-Apple's account servers return these URLs with each device (`listImageLocation`, `infoboxImageLocation`, …). Settings, iCloud and the Apple Account web pages show them.
+### Anywhere else
 
-**Generation** is the year of the OS whose wallpaper the device shows. It is the same across platforms: `year − 2010`.
+```swift
+let device = AppleDevice("iPhone18,1", color: "3b3b3c-47ade5", osVersion: "26.1")
 
-| Generation | 4 | … | 8 | 11 | 12 | 13 | 14 | 15 |
-|---|---|---|---|---|---|---|---|---|
-| Releases | iOS 8 (2014) | … | iOS 12, macOS 10.14, watchOS 5 | iOS 15 | iOS 16, macOS 13, tvOS 16 | iOS 17, watchOS 10, visionOS 1 | iOS 18, macOS 15 | the 26 releases |
+let image = try await device.image()    // UIImage, or NSImage on macOS
+let png   = try await device.imageData()
+let url   = try await device.imageURL()
+```
 
-A device has images from the generation it launched with up to the newest one. Generations after the last OS it supports repeat its last image. The server picks the generation from the OS the device reports. `OSGeneration(platform, version)` does that mapping.
+### Describing a device
 
-| Family | Model | Color |
+| | Example | |
 |---|---|---|
-| `iPhone`, `iPad`, `iPod` | `iPhone18,1` | Required (except early models): `<cover glass>-<housing>` hex, e.g. `3b3b3c-47ade5` |
-| `Watch` | `Watch7,1` | Required: material and color, e.g. `AlmSpGry`, `AlmPink`, `CeramicWhite` |
-| `HomePod` | `AudioAccessory5,1` | Required: hex pair as for iPhone |
-| `Mac` | `Mac16,1` (Apple silicon) | None |
-| `MacBookPro`, `iMac`, … | `MacBookPro15,1` (Intel) | None |
-| `AppleTV` | `AppleTV14,1` | None |
-| `RealityDevice` | `RealityDevice14,1` | None |
-| `AirPods` | `AirPods_8212` (Bluetooth product ID) | None |
+| `model` | `"iPhone18,1"`, `"Mac16,1"`, `"Watch7,1"`, `"Device1,8212"` | The model identifier; for AirPods and Beats, `Device1,` plus the Bluetooth product ID |
+| `color` | `"3b3b3c-47ade5"`, `"AlmPink"`, `"1-9"` | Optional. Any of Apple's color codes ([below](#colors)); leave it out for the default color |
+| `osVersion` | `"26.1"`, `"18.6"` | Optional. Picks the wallpaper; leave it out for the newest |
 
-A missing image answers 404. Requests with a non-browser `User-Agent` (curl's default) get 403 on cache misses, whether or not the image exists. `URLSession`'s default agent is fine.
+`AppleDevice.current` fills in this device's model and OS version.
 
-### Find My CDN: one image per model and color
+Sizes are `.small` (the device list's image) and `.large` (the detail view's, the default). The scale follows the screen.
 
+On macOS, `device.systemIcon` returns the system's own 1024 px icon for the model, offline. `image()` falls back to it when no CDN has the device, as for Apple Pencil or Studio Display.
+
+## The wallpaper follows the OS
+
+Apple renders each device with the wallpaper of the OS it runs. Pass `osVersion` to get the matching image.
+
+<table>
+  <tr>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-8.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 12</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-9.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 13</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-10.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 14</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-11.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 15</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-12.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 16</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-13.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 17</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-14.0/iPhone/iPhone11,8-3b3b3c-dcdede/online-infobox__3x.png" width="100"><br>iOS 18</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-12.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 13</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-13.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 14</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 15</td>
+    <td align="center"><img src="https://appleid.cdn-apple.com/static/deviceImages-15.0/Mac/Mac14,6/online-infobox__3x.png" width="160"><br>macOS 26</td>
+  </tr>
+</table>
+
+```swift
+AppleDevice("iPhone11,8", color: "3b3b3c-dcdede", osVersion: "16.0")   // the third-from-right image above
 ```
-https://statici.icloud.com/fmipmobile/deviceImages-9.0/<Family>/<Model>[-<DeviceColor>-<DeviceEnclosureColor>-0]/online-<style>[__2x|__3x].png
-```
 
-- **No wallpaper generations.** The image doesn't follow the OS version.
-- **The color is optional.** Leaving it out gives the default color. The numbers are MobileGestalt's `DeviceColor` and `DeviceEnclosureColor`. On macOS they match the suffix of the device's icon in `CoreTypes.bundle` (`com.apple.iphone-17-pro-9.icns` → `1-9-0`).
-- **Macs are filed by family** (`MacBookPro/Mac16,1`).
-- **AirPods and Beats** are filed as `Accessory/AirPods_<product ID>` and `Accessory/Beats_<product ID>`.
-- **A missing image** redirects to apple.com.
+## Colors
 
-## How a request is resolved
+Each product line encodes color its own way. Pass whichever code you have; the package recognizes the form.
 
-`DeviceImageRequest.candidateURLs` lists, best first:
+| Product | Code | Example | Where it comes from |
+|---|---|---|---|
+| iPhone, iPad, iPod, HomePod | cover glass and housing hex | `3b3b3c-47ade5` (17 Pro, Deep Blue) | MobileGestalt `DeviceCoverGlassColor`, `DeviceHousingColor`; Apple Account device lists |
+| Apple Watch | material and color | `AlmPink`, `AlmSpGry`, `CeramicWhite` | Apple Account device lists |
+| Any, Find My images only | `DeviceColor`-`DeviceEnclosureColor` | `1-9` | MobileGestalt; Find My's `deviceColor`; the number in the macOS icon's name (`com.apple.iphone-17-pro-9.icns`) |
+| Mac, Apple TV, Vision Pro, AirPods | none | | |
 
-1. **Account CDN at the requested generation**, then older generations, then newer ones; with no generation given, newest first. This step is skipped for families that need a color when no account color is given.
-2. **Find My CDN**, in the color first and then in the default one.
+The OS-specific wallpapers come from Apple's account image CDN, which only has iPhones, iPads, Watches and HomePods in a color. Without a color code the package uses Find My's image of the model instead: the default color, with no OS-specific wallpaper.
 
-`DeviceImageLoader` fetches them in order and returns the first image. It remembers which URL worked for each request.
+A device's own color can only be read through private API (MobileGestalt) or over USB (`ideviceinfo`), so `AppleDevice.current` doesn't include it.
 
 ## Coverage
 
-As checked in October 2026 against the models macOS 27's CoreTypes knows:
+As checked in October 2026 against every model macOS 27 knows:
 
-| Product line | Account CDN | Find My CDN | macOS icon |
+| Product line | OS wallpapers | Image | macOS icon |
 |---|---|---|---|
-| iPhone, iPad, iPod touch | ✓ with color | ✓ | ✓ |
-| Apple Watch | ✓ with color | ✓ | ✓ |
-| Mac | ✓ | ✓ | ✓ |
-| Apple TV, HomePod, Vision Pro | ✓ | ✓ | ✓ |
-| AirPods | most product IDs | most product IDs | ✓ |
-| Beats | – | a few | ✓ |
-| Apple Pencil, AirTag, Studio Display | – | – | ✓ |
+| iPhone, iPad, iPod touch, Apple Watch | ✓ with a color | ✓ | ✓ |
+| Mac, Apple TV, Vision Pro | ✓ | ✓ | ✓ |
+| HomePod | ✓ with a color | ✓ | ✓ |
+| AirPods | most models | most models | ✓ |
+| Beats | | a few | ✓ |
+| Apple Pencil, AirTag, Studio Display | | | ✓ |
 
-## Getting a device's color
+> [!IMPORTANT]
+> The images come from Apple's servers through URLs Apple doesn't document, and they belong to Apple. They may change or disappear without notice. Check that your use is allowed before shipping it.
 
-- **Account device lists.** The image URLs already contain the color.
-- **Find My.** Device records carry `deviceColor` and `rawDeviceModel`.
-- **On the device.** MobileGestalt's `DeviceCoverGlassColor` and `DeviceHousingColor` give the hex pair; `DeviceColor` and `DeviceEnclosureColor` give the numbers. These are private APIs, so this package doesn't call them.
-- **Over USB.** `ideviceinfo` / lockdownd report the same keys.
+## How it works
+
+Two CDNs serve these images.
+
+### Apple's account CDN (what Settings shows)
+
+```
+https://appleid.cdn-apple.com/static/deviceImages-<generation>.0/<Family>/<Model>[-<color>]/online-{sourcelist,infobox}[__2x|__3x].png
+```
+
+`<generation>` is the OS release year minus 2010, the same on every platform:
+
+| Generation | 8 | 12 | 14 | 15 |
+|---|---|---|---|---|
+| Releases | 2018: iOS 12, macOS 10.14, watchOS 5 | 2022: iOS 16, macOS 13, tvOS 16 | 2024: iOS 18, macOS 15 | 2025: the "26" releases |
+
+A device has images from the generation it launched in onward. Generations past its last OS repeat its last image.
+
+The families are:
+- `iPhone`, `iPad`, `iPod`, `Watch`, `AppleTV`, `RealityDevice`
+- `HomePod` (models `AudioAccessoryN,N`)
+- `Mac` for Apple silicon Macs, and `MacBookPro`, `iMac`, … for Intel ones
+- `AirPods` (models `AirPods_<product ID>`)
+
+A missing image answers 404. Clients it doesn't recognize, curl's default User-Agent among them, get 403 instead.
+
+### Find My's CDN
+
+```
+https://statici.icloud.com/fmipmobile/deviceImages-9.0/<Family>/<Model>[-<DeviceColor>-<EnclosureColor>-0]/online-{sourcelist,infobox}[__2x|__3x].png
+```
+
+There is one image per model and color, with no OS wallpapers. Macs are filed by family (`MacBookPro/Mac16,1`), and AirPods and Beats as `Accessory/AirPods_<product ID>`. A missing image redirects to apple.com.
+
+### Resolving a device
+
+`device.imageURLCandidates()` lists every URL the image may be at, best first:
+
+1. The account CDN at the device's generation, then older generations, then newer ones.
+2. Find My in the device's color, then in the default color.
+
+`image()`, `imageData()` and `imageURL()` try them in order and keep the result for the next call.
 
 ## Maintenance
 
-`Scripts/ScanMacFamilies.swift` rebuilds the `MacNN,N` → Find My family table from the local CoreTypes and the CDN. Run it on the newest macOS after new Macs ship:
+`Scripts/ScanMacFamilies.swift` rebuilds the table of Mac models' Find My families from macOS's model list. Run it on the newest macOS after new Macs ship:
 
 ```sh
 swift Scripts/ScanMacFamilies.swift
 ```
 
-Unknown Mac models still work without it; they just try every family.
+Without it, new Macs still work; they just try every family.
 
-Run the tests that hit the CDNs with:
+To also run the tests that fetch from the CDNs:
 
 ```sh
 APPLE_DEVICE_IMAGES_NETWORK=1 swift test
@@ -111,7 +197,7 @@ APPLE_DEVICE_IMAGES_NETWORK=1 swift test
 
 ## Prior work
 
-- [insidegui's notes on the iCloud device image URL format](https://gist.github.com/insidegui/a18124c0c573a4eb656f5c485ea7dae4) and its comments, which trace the color codes through their versions
+- [insidegui's notes on the iCloud device image URL format](https://gist.github.com/insidegui/a18124c0c573a4eb656f5c485ea7dae4) and its comments, which trace the color codes through the CDN's versions
 - [MunkiReport](https://github.com/munkireport) and [munki-manager](https://github.com/joncrain/munki-manager), which build Find My URLs for Macs
 
 ## License
