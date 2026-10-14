@@ -122,7 +122,8 @@ Each product line encodes color its own way. Pass whichever code you have; the p
 | iPhone, iPad, iPod, HomePod | cover glass and housing hex | `3b3b3c-47ade5` (17 Pro, Deep Blue) | MobileGestalt `DeviceCoverGlassColor`, `DeviceHousingColor`; Apple Account device lists |
 | Apple Watch | material and color | `AlmPink`, `AlmSpGry`, `CeramicWhite` | Apple Account device lists |
 | Any, Find My images only | `DeviceColor`-`DeviceEnclosureColor` | `1-9` | MobileGestalt; Find My's `deviceColor`; the number in the macOS icon's name (`com.apple.iphone-17-pro-9.icns`) |
-| Mac, Apple TV, Vision Pro, AirPods | none | | |
+| AirPods Max (USB-C, 2) | Find My's number | `19` | `18` Midnight, `19` Starlight, `20` Blue, `21` Orange, `22` Purple |
+| Mac, Apple TV, Vision Pro, other AirPods | none | | |
 
 The [color table](Colors/README.md) lists both codes for every color of every iPhone, iPad, iPod touch, HomePod and Apple Watch since 2013, with pictures. A few are still missing; if you own one, [adding it](CONTRIBUTING.md#add-a-color) takes a minute.
 
@@ -139,10 +140,12 @@ As checked in October 2026 against every model macOS 27 knows, and the products 
 | iPhone, iPad, iPod touch, Apple Watch | ✓ with a color | ✓ | ✓ |
 | Mac, Apple TV, Vision Pro | ✓ | ✓ | ✓ |
 | HomePod | ✓ with a color | ✓ | ✓ |
-| AirPods | most models | most models | ✓ |
+| AirPods, AirPods Pro, AirPods Max | most models | every model; AirPods Max in color | ✓ |
 | Beats | | a few | ✓ |
-| Apple Pencil, AirTag, Studio Display | | | ✓ |
+| Apple Pencil, AirTag, Studio Display, Studio Display XDR | | | ✓ |
 | HomeView | not yet | not yet | |
+
+All 112 Macs since 2013 have images: every MacBook Air, MacBook Pro, MacBook Neo, iMac, iMac Pro, Mac mini, Mac Studio and Mac Pro. The two 13-inch MacBook Pros of 2020 with Intel chips (`MacBookPro16,2`, `16,3`) only have Find My's image, without wallpapers.
 
 Neither CDN has the HomeView hub (`HomeAccessory17,1`, wall mounted `17,2`), the Apple TV 4K (4th generation, `AppleTV18,1`) or HomePod mini 2 (`AudioAccessory11,1`) yet; Apple adds images around when devices go on sale. The package already asks for them, trying both `HomeView` and `HomeAccessory` as HomeView's folder.
 

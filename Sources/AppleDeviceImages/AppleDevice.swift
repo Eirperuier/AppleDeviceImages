@@ -15,6 +15,7 @@ public struct AppleDevice: Hashable, Sendable {
     /// - `"3b3b3c-47ade5"`: cover glass and housing hex (iPhone, iPad, iPod, HomePod)
     /// - `"AlmPink"`: material and color (Apple Watch)
     /// - `"1-9-0"` or `"1-9"`: `DeviceColor` and `DeviceEnclosureColor` numbers (Find My)
+    /// - `"19"`: one number (Find My's AirPods Max colors)
     ///
     /// Without it the image shows the model's default color.
     public var color: String?
@@ -105,7 +106,7 @@ struct DeviceColor: Hashable, Sendable {
         let parts = code.split(separator: "-")
         if parts.count == 2, parts.allSatisfy({ $0.count == 6 && $0.allSatisfy(\.isHexDigit) }) {
             self.init(account: code.lowercased())
-        } else if (2...3).contains(parts.count), parts.allSatisfy({ $0.count <= 3 && Int($0) != nil }) {
+        } else if (1...3).contains(parts.count), parts.allSatisfy({ $0.count <= 3 && Int($0) != nil }) {
             self.init(findMy: parts.count == 2 ? code + "-0" : code)
         } else {
             self.init(account: code, findMy: code)

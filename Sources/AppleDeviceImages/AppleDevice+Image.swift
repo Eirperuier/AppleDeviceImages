@@ -54,6 +54,13 @@ extension AppleDevice {
         let color = parsedColor
         let file = "online-\(size.fileName)\(scale > 1 ? "__\(min(scale, 3))x" : "").png"
         var urls: [URL] = []
+        let findMy = product.findMyFolders(color: color.findMy).map {
+            URL(string: "https://statici.icloud.com/fmipmobile/deviceImages-9.0/\($0)/\(file)")!
+        }
+        // Without wallpapers to tell generations apart, a color only Find My has comes first.
+        if product.colorsOnlyOnFindMy, color.findMy != nil {
+            return findMy
+        }
         if !product.accountNeedsColor || color.account != nil {
             let folders = product.accountFolders(color: color.account)
             for generation in generationOrder {
@@ -62,10 +69,7 @@ extension AppleDevice {
                 }
             }
         }
-        for folder in product.findMyFolders(color: color.findMy) {
-            urls.append(URL(string: "https://statici.icloud.com/fmipmobile/deviceImages-9.0/\(folder)/\(file)")!)
-        }
-        return urls
+        return urls + findMy
     }
 
     /// The scale of this platform's screens: 2 on macOS, 3 elsewhere.

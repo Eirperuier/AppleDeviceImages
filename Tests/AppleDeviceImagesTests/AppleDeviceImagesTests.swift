@@ -43,7 +43,7 @@ import Testing
 @Suite struct ColorTests {
     @Test(arguments: [
         ("3b3b3c-47ade5", "3b3b3c-47ade5", nil), ("#3B3B3C-#47ADE5", "3b3b3c-47ade5", nil),
-        ("1-9-0", nil, "1-9-0"), ("1-9", nil, "1-9-0"),
+        ("1-9-0", nil, "1-9-0"), ("1-9", nil, "1-9-0"), ("19", nil, "19"),
         ("AlmPink", "AlmPink", "AlmPink"), ("", nil, nil),
     ] as [(String, String?, String?)])
     func aCodeGoesToTheCDNThatReadsIt(code: String, account: String?, findMy: String?) {
@@ -91,6 +91,22 @@ import Testing
     @Test func homePodWithoutAColorGoesToFindMy() {
         let urls = AppleDevice("AudioAccessory5,1").imageURLCandidates(scale: 3).map(\.absoluteString)
         #expect(urls == ["https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1/online-infobox__3x.png"])
+    }
+
+    @Test func iMacProHasItsOwnAccountFolderButFindMyFilesItWithTheIMacs() {
+        let urls = AppleDevice("iMacPro1,1", osVersion: "27.0").imageURLCandidates(scale: 3).map(\.absoluteString)
+        #expect(urls.first == "https://appleid.cdn-apple.com/static/deviceImages-27.0/iMacPro/iMacPro1,1/online-infobox__3x.png")
+        #expect(urls.last == "https://statici.icloud.com/fmipmobile/deviceImages-9.0/iMac/iMacPro1,1/online-infobox__3x.png")
+    }
+
+    @Test func airPodsMaxInAColorGoesToFindMy() {
+        let urls = AppleDevice("Device1,8237", color: "19").imageURLCandidates(scale: 3).map(\.absoluteString)
+        #expect(urls == [
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8237-19/online-infobox__3x.png",
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/Beats_8237-19/online-infobox__3x.png",
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8237/online-infobox__3x.png",
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/Beats_8237/online-infobox__3x.png",
+        ])
     }
 
     @Test func homeViewTriesBothFolders() {
@@ -148,6 +164,12 @@ struct NetworkTests {
 @Suite struct SystemIconTests {
     @Test func knownModelHasAnIcon() {
         #expect(AppleDevice("iPhone15,2").systemIcon != nil)
+    }
+
+    @Test func bothStudioDisplaysOf2026HaveTheirOwnIcon() throws {
+        let xdr = try #require(AppleDevice("AppleDisplay18,1").systemIcon?.tiffRepresentation)
+        let studio = try #require(AppleDevice("AppleDisplay18,2").systemIcon?.tiffRepresentation)
+        #expect(xdr != studio)
     }
 
     @Test func unknownModelHasNone() {

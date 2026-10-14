@@ -6,7 +6,7 @@ struct Product: Hashable, Sendable {
 
     enum Kind: Hashable, Sendable {
         /// A family named by the identifier's letters: iPhone, iPad, iPod, Watch, AppleTV, RealityDevice,
-        /// and Macs from before 2023 (`MacBookPro15,1`).
+        /// and Macs from before 2023 (`MacBookPro15,1`, `iMacPro1,1`).
         case named(String)
         /// A HomePod (`AudioAccessory5,1`).
         case homePod
@@ -34,7 +34,7 @@ struct Product: Hashable, Sendable {
             self.kind = .mac
         } else {
             self.model = model
-            self.kind = .named(letters == "iMacPro" ? "iMac" : letters)
+            self.kind = .named(letters)
         }
     }
 
@@ -56,6 +56,11 @@ struct Product: Hashable, Sendable {
             default: nil
             }
         }
+    }
+
+    /// Whether only Find My has this product's colors: AirPods Max.
+    var colorsOnlyOnFindMy: Bool {
+        if case .audio = kind { true } else { false }
     }
 
     /// Whether the account CDN only has this product in a color: iPhone, iPad, iPod, Apple Watch and HomePod.
@@ -80,10 +85,12 @@ struct Product: Hashable, Sendable {
     }
 
     /// Find My folders to try: in the color first, then in the default one.
+    /// AirPods colors are numbers after the product ID (`AirPods_8223-19`).
     func findMyFolders(color: String?) -> [String] {
         let folders: [String] = switch kind {
         case .named(let family):
-            ["\(family)/\(model)"]
+            // Find My files the iMac Pro with the iMacs; the account CDN under its own name.
+            ["\(family == "iMacPro" ? "iMac" : family)/\(model)"]
         case .homePod:
             ["HomePod/\(model)"]
         case .homeView:
@@ -93,7 +100,6 @@ struct Product: Hashable, Sendable {
         case .audio(let productID):
             ["Accessory/AirPods_\(productID)", "Accessory/Beats_\(productID)"]
         }
-        if case .audio = kind { return folders }
         guard let color else { return folders }
         return folders.map { "\($0)-\(color)" } + folders
     }
