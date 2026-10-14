@@ -1,0 +1,29 @@
+name: Add a color
+description: Send the picture address Apple shows for your device; the color table learns its code.
+title: "Color: "
+labels: [color]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. Apple's servers know each color by a code no one has published, and one address from a real device settles it. See which colors are [wanted](https://github.com/Eirperuier/AppleDeviceImages/blob/main/Colors/README.md#wanted); confirmations of known ones help too.
+
+        **On a computer:**
+        1. Sign in at [account.apple.com](https://account.apple.com) and open **Devices**.
+        2. Right-click a device's picture and choose **Copy Image Address**.
+
+        Several devices at once: open the browser's console on that page (Safari: Develop › Show JavaScript Console; Chrome: View › Developer › JavaScript Console), run this, and paste:
+
+        ```js
+        copy([...new Set([...document.images].map(i => i.currentSrc || i.src).filter(s => s.includes('deviceImages')))].join('\n'))
+        ```
+
+        An address holds only the model and its color, such as `…/iPhone/iPhone13,1-3b3b3c-a2d7c2/online-sourcelist__2x.png`; nothing that identifies you or the device.
+  - type: textarea
+    id: addresses
+    attributes:
+      label: Image addresses
+      description: One per line. If you can, add the color's name after the address, as Apple sold it.
+      placeholder: https://appleid.cdn-apple.com/static/deviceImages-27.0/iPhone/iPhone18,1-3b3b3c-…/online-sourcelist__2x.png Cosmic Orange
+    validations:
+      required: true

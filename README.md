@@ -124,6 +124,8 @@ Each product line encodes color its own way. Pass whichever code you have; the p
 | Any, Find My images only | `DeviceColor`-`DeviceEnclosureColor` | `1-9` | MobileGestalt; Find My's `deviceColor`; the number in the macOS icon's name (`com.apple.iphone-17-pro-9.icns`) |
 | Mac, Apple TV, Vision Pro, AirPods | none | | |
 
+The [color table](Colors/README.md) lists both codes for every color of every iPhone, iPad, iPod touch, HomePod and Apple Watch since 2013, with pictures. A few are still missing; if you own one, [adding it](CONTRIBUTING.md#add-a-color) takes a minute.
+
 The OS-specific wallpapers come from Apple's account image CDN, which only has iPhones, iPads, Watches and HomePods in a color. Without a color code the package uses Find My's image of the model instead: the default color, with no OS-specific wallpaper.
 
 A device's own color can only be read through private API (MobileGestalt) or over USB (`ideviceinfo`), so `AppleDevice.current` doesn't include it.
@@ -199,15 +201,23 @@ swift Scripts/ScanMacFamilies.swift
 
 Without it, new Macs still work; they just try every family.
 
+`Scripts/colors.py` keeps the [color table](Colors/README.md); see [CONTRIBUTING](CONTRIBUTING.md#maintaining-the-color-table).
+
 To also run the tests that fetch from the CDNs:
 
 ```sh
 APPLE_DEVICE_IMAGES_NETWORK=1 swift test
 ```
 
+## Contributing
+
+The color table grows from codes read on real devices. See [CONTRIBUTING](CONTRIBUTING.md) for how to add yours.
+
 ## Prior work
 
 - [insidegui's notes on the iCloud device image URL format](https://gist.github.com/insidegui/a18124c0c573a4eb656f5c485ea7dae4) and its comments, which trace the color codes through the CDN's versions
+- [AppleDB](https://github.com/littlebyteorg/appledb), whose device files name every color
+- [FutureTap's DeviceColors sheet](https://docs.google.com/spreadsheets/d/0AnwN2mJZodDbdEloX3FRc21CWGt0NUR1R2o5ZTdQMlE), with housing and glass hex values of older models
 - [MunkiReport](https://github.com/munkireport) and [munki-manager](https://github.com/joncrain/munki-manager), which build Find My URLs for Macs
 
 ## License

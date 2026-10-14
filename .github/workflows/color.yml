@@ -1,0 +1,58 @@
+# Checks the image addresses in an "Add a color" issue against Apple's servers, adds what they show to the color
+# table in a pull request, and replies on the issue.
+name: Add a color
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: color-${{ github.event.issue.number }}
+
+jobs:
+  add:
+    if: contains(github.event.issue.labels.*.name, 'color')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install pillow numpy
+      - name: Check the addresses
+        # The issue's text goes in through the environment, never into a command line.
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          SUMMARY: ${{ runner.temp }}/summary.md
+        run: python3 Scripts/colors.py issue
+      - name: Open a pull request
+        id: pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: color/issue-${{ github.event.issue.number }}
+          add-paths: Colors/
+          commit-message: "Colors from #${{ github.event.issue.number }}"
+          title: "Colors from #${{ github.event.issue.number }}"
+          body: |
+            Closes #${{ github.event.issue.number }}.
+
+            Made by the Add a color workflow. Check the names against the pictures in `Colors/README.md` before merging.
+      - name: Reply
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          PR: ${{ steps.pr.outputs.pull-request-url }}
+        run: |
+          {
+            echo "Thanks! Apple's servers show:"
+            echo
+            cat "$RUNNER_TEMP/summary.md"
+            if [ -n "$PR" ]; then echo; echo "It goes into the table with $PR."; fi
+          } > "$RUNNER_TEMP/reply.md"
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/reply.md"

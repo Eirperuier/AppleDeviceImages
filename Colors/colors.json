@@ -1,0 +1,4001 @@
+{
+ "palette": {
+  "glass": {
+   "1": [
+    "3b3b3c",
+    "272728",
+    "121211"
+   ],
+   "2": [
+    "e1e4e3",
+    "e4e7e8",
+    "c8caca"
+   ],
+   "3": [
+    "3b3b3c",
+    "e1e4e3"
+   ]
+  },
+  "housing": [
+   "302f34",
+   "dcdede",
+   "47ade5",
+   "ccc7d7",
+   "aeb1b8",
+   "d6c8b9",
+   "e5bdb5",
+   "b9b7ba",
+   "dadcdb",
+   "e1ccb7",
+   "e4c1b9",
+   "b4b5b9",
+   "d7d9d8",
+   "e1ccb5",
+   "99989b",
+   "d4c5b3",
+   "f5f4f7",
+   "fe767a",
+   "faf189",
+   "46abe0",
+   "a1e877",
+   "c6353f",
+   "121211",
+   "c8caca",
+   "272728",
+   "e4e7e8",
+   "3b3b3c",
+   "e1e4e3",
+   "a2d7c2"
+  ],
+  "watch": []
+ },
+ "products": {
+  "Apple Watch (1st generation)": {
+   "account": {
+    "AlmGld": null,
+    "AlmRsGld": null,
+    "AlmSpGry": null,
+    "RsGld": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Gold": "F3D7C8",
+    "Gold - Rose Gold": "E2C2BB",
+    "Gold - Yellow Gold": "E6D0A0",
+    "Rose Gold": "A58377",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734"
+   },
+   "edge": {
+    "AlmGld": "c4ae99",
+    "AlmRsGld": "cda8a2",
+    "AlmSpGry": "5d5d5d",
+    "RsGld": "9c6b4d"
+   },
+   "family": "Apple Watch",
+   "findmy": {},
+   "ids": [
+    "Watch1,1",
+    "Watch1,2"
+   ],
+   "name": "Apple Watch (1st generation)",
+   "rep": "Watch1,1",
+   "year": 2015
+  },
+  "Apple Watch SE (1st generation)": {
+   "account": {
+    "AlmSpGry": "1-2"
+   },
+   "class": "Watch",
+   "colors": {
+    "Gold": "F3D7C8",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69"
+   },
+   "edge": {
+    "1-1": "bbbbbe",
+    "1-13": "deb6a6",
+    "1-2": "636166"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "f59a23b901",
+    "1-13": "bf34608e4c",
+    "1-2": "aa53b69811"
+   },
+   "ids": [
+    "Watch5,11",
+    "Watch5,12",
+    "Watch5,9",
+    "Watch5,10"
+   ],
+   "name": "Apple Watch SE (1st generation)",
+   "rep": "Watch5,11",
+   "year": 2020
+  },
+  "Apple Watch SE (2nd generation)": {
+   "account": {
+    "AlmSpGry": "1-2"
+   },
+   "class": "Watch",
+   "colors": {
+    "Midnight": "161B21",
+    "Silver": "9C9C9E",
+    "Starlight": "A1948C"
+   },
+   "edge": {
+    "1-1": "d2c7c0",
+    "1-2": "293037",
+    "1-32": "bababc"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "be57e36731",
+    "1-2": "f4ec107dd6",
+    "1-32": "75a89eeb89"
+   },
+   "ids": [
+    "Watch6,12",
+    "Watch6,13",
+    "Watch6,10",
+    "Watch6,11"
+   ],
+   "name": "Apple Watch SE (2nd generation)",
+   "rep": "Watch6,12",
+   "year": 2022
+  },
+  "Apple Watch SE 3": {
+   "account": {
+    "AlmSpGry": "1-2"
+   },
+   "class": "Watch",
+   "colors": {
+    "Midnight": "161B21",
+    "Starlight": "A1948C"
+   },
+   "edge": {
+    "1-1": "b1a49d",
+    "1-2": "2d3138"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "ba54d6e8a7",
+    "1-2": "be97ed7cfc"
+   },
+   "ids": [
+    "Watch7,13",
+    "Watch7,14",
+    "Watch7,15",
+    "Watch7,16"
+   ],
+   "name": "Apple Watch SE 3",
+   "rep": "Watch7,13",
+   "year": 2025
+  },
+  "Apple Watch Series 1": {
+   "account": {
+    "AlmGld": "1-3",
+    "AlmRsGld": "1-4",
+    "AlmSpGry": "1-2",
+    "CeramicWhite": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Gold": "F3D7C8",
+    "Rose Gold": "A58377",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69"
+   },
+   "edge": {
+    "1-1": "b3b2b2",
+    "1-2": "5d5d5d",
+    "1-3": "c4ae99",
+    "1-4": "cda8a2",
+    "1-5": "737373",
+    "1-6": "1f1f20",
+    "CeramicWhite": "eae6e5"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "e29e2a727e",
+    "1-2": "5ca5b82c27",
+    "1-3": "3ece82e601",
+    "1-4": "4a9c770fd3",
+    "1-5": "ffc1e1d4e5",
+    "1-6": "d537b5fce8"
+   },
+   "ids": [
+    "Watch2,6",
+    "Watch2,7"
+   ],
+   "name": "Apple Watch Series 1",
+   "rep": "Watch2,6",
+   "year": 2016
+  },
+  "Apple Watch Series 10": {
+   "account": {
+    "AlmJetBlack": "1-34",
+    "AlmRsGld": "1-4",
+    "TitaniumGold": "1-23",
+    "TitaniumNatural": "1-36"
+   },
+   "class": "Watch",
+   "colors": {
+    "Jet Black": "0A0A0A",
+    "Rose Gold": "A58377",
+    "Silver": "9C9C9E",
+    "Titanium - Gold": "BEADA5",
+    "Titanium - Natural": "A7A29C",
+    "Titanium - Slate": "7A726F"
+   },
+   "edge": {
+    "1-23": "927a63",
+    "1-32": "c6c6c8",
+    "1-34": "636264",
+    "1-36": "706963",
+    "1-38": "504b48",
+    "1-4": "d8b6a7"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-23": "3aeb80b8f5",
+    "1-32": "2d1ebe0ee4",
+    "1-34": "11fcef1469",
+    "1-36": "0f30a2dbef",
+    "1-38": "90edd69413",
+    "1-4": "9938c65dd9"
+   },
+   "ids": [
+    "Watch7,10",
+    "Watch7,11",
+    "Watch7,8",
+    "Watch7,9"
+   ],
+   "name": "Apple Watch Series 10",
+   "rep": "Watch7,10",
+   "year": 2024
+  },
+  "Apple Watch Series 11": {
+   "account": {
+    "AlmGray": "1-41",
+    "AlmJetBlack": "1-34",
+    "AlmRsGld": "1-4",
+    "TitaniumGold": "1-23",
+    "TitaniumNatural": "1-36"
+   },
+   "class": "Watch",
+   "colors": {
+    "Jet Black": "0A0A0A",
+    "Rose Gold": "A58377",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Titanium - Gold": "BEADA5",
+    "Titanium - Natural": "A7A29C",
+    "Titanium - Silver": "DAD5D2",
+    "Titanium - Slate": "7A726F"
+   },
+   "edge": {
+    "1-23": "9f876d",
+    "1-32": "cdcdcf",
+    "1-34": "585659",
+    "1-36": "7e7770",
+    "1-38": "5a5550",
+    "1-39": "95918f",
+    "1-4": "e1bfb0",
+    "1-41": "6b6b6c"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-23": "63709fa0e0",
+    "1-32": "4959ae2c3e",
+    "1-34": "49b0a85913",
+    "1-36": "bbc7d79f76",
+    "1-38": "c58e93baf2",
+    "1-39": "26c5288478",
+    "1-4": "8e88e2e502",
+    "1-41": "0b514a5fef"
+   },
+   "ids": [
+    "Watch7,17",
+    "Watch7,18",
+    "Watch7,19",
+    "Watch7,20"
+   ],
+   "name": "Apple Watch Series 11",
+   "rep": "Watch7,17",
+   "year": 2025
+  },
+  "Apple Watch Series 12": {
+   "account": {
+    "AlmGray": "1-41",
+    "AlmJetBlack": "1-34",
+    "TitaniumNatural": "1-36"
+   },
+   "class": "Watch",
+   "colors": {
+    "Black": "413D3A",
+    "Ceramic - Night Blue": "909193",
+    "Ceramic - Pearl White": "E4E1DC",
+    "Dark Bronze": "624F41",
+    "Light Gold": "948372",
+    "Space Gray": "888785",
+    "Titanium - Natural": "CFC8C0",
+    "Titanium - Radiant Gold": "FBF0D2"
+   },
+   "edge": {
+    "1-34": "3a3634",
+    "1-36": "433f3b",
+    "1-41": "848080"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-34": "92c772a9b7",
+    "1-36": "c6a4a6aeb0",
+    "1-41": "5492e692e0"
+   },
+   "ids": [
+    "Watch8,2",
+    "Watch8,3",
+    "Watch8,4",
+    "Watch8,5"
+   ],
+   "name": "Apple Watch Series 12",
+   "rep": "Watch8,2",
+   "year": 2026
+  },
+  "Apple Watch Series 2": {
+   "account": {
+    "AlmGld": "1-3",
+    "AlmRsGld": "1-4",
+    "AlmSpGry": "1-2",
+    "CeramicWhite": "1-7"
+   },
+   "class": "Watch",
+   "colors": {
+    "Ceramic - White": "FAFAFA",
+    "Gold": "F3D7C8",
+    "Rose Gold": "A58377",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734"
+   },
+   "edge": {
+    "1-1": "b3b2b2",
+    "1-2": "5d5d5d",
+    "1-3": "c4ae99",
+    "1-4": "cda8a2",
+    "1-5": "737373",
+    "1-6": "1f1f20",
+    "1-7": "eae6e5"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "e29e2a727e",
+    "1-2": "5ca5b82c27",
+    "1-3": "3ece82e601",
+    "1-4": "4a9c770fd3",
+    "1-5": "ffc1e1d4e5",
+    "1-6": "d537b5fce8",
+    "1-7": "eb91c425fb"
+   },
+   "ids": [
+    "Watch2,3",
+    "Watch2,4"
+   ],
+   "name": "Apple Watch Series 2",
+   "rep": "Watch2,3",
+   "year": 2016
+  },
+  "Apple Watch Series 3": {
+   "account": {
+    "AlmGld": null,
+    "AlmRsGld": null,
+    "AlmSpGry": "1-2",
+    "CeramicGray": "1-2",
+    "CeramicWhite": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Ceramic - Gray": "595854",
+    "Ceramic - White": "FAFAFA",
+    "Gold": "F3D7C8",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734"
+   },
+   "edge": {
+    "1-1": "b3b2b2",
+    "1-13": "b3b2b2",
+    "1-2": "5d5d5d",
+    "1-5": "737373",
+    "1-6": "1f1f20",
+    "AlmGld": "c4ae99",
+    "AlmRsGld": "cda8a2",
+    "CeramicWhite": "eae6e5"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "8337d4052b",
+    "1-13": "e29e2a727e",
+    "1-2": "9ea858136a",
+    "1-5": "b9eee8d45d",
+    "1-6": "98c7e4536c"
+   },
+   "ids": [
+    "Watch3,1",
+    "Watch3,2",
+    "Watch3,3",
+    "Watch3,4"
+   ],
+   "name": "Apple Watch Series 3",
+   "rep": "Watch3,1",
+   "year": 2017
+  },
+  "Apple Watch Series 4": {
+   "account": {
+    "AlmGld": "1-13",
+    "AlmSpGry": "1-2",
+    "CeramicWhite": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Gold": "F3D7C8",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734"
+   },
+   "edge": {
+    "1-0": "bebec0",
+    "1-13": "dfb8a7",
+    "1-2": "6f6d70",
+    "1-6": "414042",
+    "CeramicWhite": "f2f0ed"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-0": "169bd86fa3",
+    "1-13": "b50b857497",
+    "1-2": "a49fbb72ba",
+    "1-6": "93aea79b45"
+   },
+   "ids": [
+    "Watch4,1",
+    "Watch4,2",
+    "Watch4,3",
+    "Watch4,4"
+   ],
+   "name": "Apple Watch Series 4",
+   "rep": "Watch4,1",
+   "year": 2018
+  },
+  "Apple Watch Series 5": {
+   "account": {
+    "AlmGld": "1-3",
+    "AlmRsGld": "1-3",
+    "AlmSpGry": "1-2",
+    "CeramicGray": "1-7",
+    "CeramicWhite": "1-7",
+    "TitaniumSpBlk": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Ceramic - White": "FAFAFA",
+    "Gold": "F3D7C8",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734",
+    "Titanium": "948E8C",
+    "Titanium - Space Black": "58514D"
+   },
+   "edge": {
+    "1-0": "bebec0",
+    "1-2": "6f6d70",
+    "1-3": "dfb8a7",
+    "1-5": "6b6c70",
+    "1-6": "414042",
+    "1-7": "f2f0ed",
+    "1-8": "c5bdb7",
+    "TitaniumSpBlk": "6c6864"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-0": "169bd86fa3",
+    "1-2": "a49fbb72ba",
+    "1-3": "b50b857497",
+    "1-5": "7f427d5af4",
+    "1-6": "93aea79b45",
+    "1-7": "5dccce427d",
+    "1-8": "d6dbe42a53"
+   },
+   "ids": [
+    "Watch5,1",
+    "Watch5,2",
+    "Watch5,3",
+    "Watch5,4"
+   ],
+   "name": "Apple Watch Series 5",
+   "rep": "Watch5,1",
+   "year": 2019
+  },
+  "Apple Watch Series 6": {
+   "account": {
+    "AlmBlue": null,
+    "AlmGreen": "1-2",
+    "AlmRed": "1-12",
+    "AlmSpGry": "1-2",
+    "TitaniumSpBlk": null
+   },
+   "class": "Watch",
+   "colors": {
+    "(PRODUCT)RED": "A01A45",
+    "Blue": "6984AD",
+    "Gold": "F3D7C8",
+    "Silver": "9C9C9E",
+    "Space Gray": "6C6B69",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Graphite": "3C3B35",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734",
+    "Titanium": "948E8C",
+    "Titanium - Space Black": "58514D"
+   },
+   "edge": {
+    "1-1": "bbbbbe",
+    "1-12": "d13a47",
+    "1-2": "636166",
+    "AlmBlue": "374362",
+    "TitaniumSpBlk": "68645f"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "c8a24e759a",
+    "1-12": "c799711f16",
+    "1-2": "c35970ff72"
+   },
+   "ids": [
+    "Watch6,1",
+    "Watch6,2",
+    "Watch6,3",
+    "Watch6,4"
+   ],
+   "name": "Apple Watch Series 6",
+   "rep": "Watch6,1",
+   "year": 2020
+  },
+  "Apple Watch Series 7": {
+   "account": {
+    "AlmBlue": "1-26",
+    "AlmGreen": null,
+    "AlmRed": "1-18",
+    "AlmSpGry": "1-2"
+   },
+   "class": "Watch",
+   "colors": {
+    "(PRODUCT)RED": "A01A45",
+    "Blue": "6984AD",
+    "Green": "75786C",
+    "Midnight": "161B21",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Graphite": "3C3B35",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734",
+    "Starlight": "A1948C",
+    "Titanium": "948E8C",
+    "Titanium - Space Black": "58514D"
+   },
+   "edge": {
+    "1-1": "ada29b",
+    "1-18": "8e1833",
+    "1-2": "2a3038",
+    "1-26": "3e5474",
+    "AlmGreen": "363a2b"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "da951cc7d6",
+    "1-18": "259dfefa91",
+    "1-2": "6a7438d014",
+    "1-26": "2935a0742a"
+   },
+   "ids": [
+    "Watch6,6",
+    "Watch6,7",
+    "Watch6,8",
+    "Watch6,9"
+   ],
+   "name": "Apple Watch Series 7",
+   "rep": "Watch6,6",
+   "year": 2021
+  },
+  "Apple Watch Series 8": {
+   "account": {
+    "AlmRed": null,
+    "AlmSpGry": null
+   },
+   "class": "Watch",
+   "colors": {
+    "(PRODUCT)RED": "A01A45",
+    "Midnight": "161B21",
+    "Silver": "9C9C9E",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Graphite": "3C3B35",
+    "Stainless Steel - Silver": "686868",
+    "Stainless Steel - Space Black": "393734",
+    "Starlight": "A1948C"
+   },
+   "edge": {
+    "1-1": "ada19b",
+    "1-18": "ac0333",
+    "1-2": "212830",
+    "1-32": "9e9ea1",
+    "AlmRed": "aa0726",
+    "AlmSpGry": "20272f"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "569c430ac1",
+    "1-18": "7996231fe7",
+    "1-2": "c1fa8dc42f",
+    "1-32": "1f832b7705"
+   },
+   "ids": [
+    "Watch6,14",
+    "Watch6,15",
+    "Watch6,16",
+    "Watch6,17"
+   ],
+   "name": "Apple Watch Series 8",
+   "rep": "Watch6,14",
+   "year": 2022
+  },
+  "Apple Watch Series 9": {
+   "account": {
+    "AlmPink": "1-31",
+    "AlmRed": "1-18",
+    "AlmSpGry": "1-2"
+   },
+   "class": "Watch",
+   "colors": {
+    "(PRODUCT)RED": "A01A45",
+    "Midnight": "161B21",
+    "Pink": "D0BBBD",
+    "Silver": "9C9C9E",
+    "Stainless Steel - Gold": "DCCDB5",
+    "Stainless Steel - Graphite": "3C3B35",
+    "Stainless Steel - Silver": "686868",
+    "Starlight": "A1948C"
+   },
+   "edge": {
+    "1-1": "ada19b",
+    "1-18": "ac0333",
+    "1-2": "212830",
+    "1-31": "baa0a3",
+    "1-32": "9e9ea1"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-1": "9c29c8539b",
+    "1-18": "af1fe2721b",
+    "1-2": "5d6b4dbd24",
+    "1-31": "e2eb89a38d",
+    "1-32": "2ca3b11ed9"
+   },
+   "ids": [
+    "Watch7,1",
+    "Watch7,2",
+    "Watch7,3",
+    "Watch7,4"
+   ],
+   "name": "Apple Watch Series 9",
+   "rep": "Watch7,1",
+   "year": 2023
+  },
+  "Apple Watch Ultra": {
+   "account": {},
+   "class": "Watch",
+   "colors": {
+    "Titanium - Natural": "A7A29C"
+   },
+   "edge": {
+    "1-8": "978f86"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-8": "771dd5fe8f"
+   },
+   "ids": [
+    "Watch6,18"
+   ],
+   "name": "Apple Watch Ultra",
+   "rep": "Watch6,18",
+   "year": 2022
+  },
+  "Apple Watch Ultra 2": {
+   "account": {
+    "TitaniumSpBlk": "1-14"
+   },
+   "class": "Watch",
+   "colors": {
+    "Titanium - Black": "4E4949",
+    "Titanium - Natural": "A7A29C"
+   },
+   "edge": {
+    "1-14": "312e2e",
+    "1-8": "978e86"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-14": "1a4e89d29c",
+    "1-8": "d7b16fa07e"
+   },
+   "ids": [
+    "Watch7,5"
+   ],
+   "name": "Apple Watch Ultra 2",
+   "rep": "Watch7,5",
+   "year": 2023
+  },
+  "Apple Watch Ultra 3": {
+   "account": {
+    "TitaniumSpBlk": null
+   },
+   "class": "Watch",
+   "colors": {
+    "Titanium - Black": "4E4949",
+    "Titanium - Natural": "A7A29C"
+   },
+   "edge": {
+    "1-14": "312e2e",
+    "1-8": "988f86",
+    "TitaniumSpBlk": "312e2e"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-14": "e8098f959d",
+    "1-8": "c1e876b738"
+   },
+   "ids": [
+    "Watch7,12"
+   ],
+   "name": "Apple Watch Ultra 3",
+   "rep": "Watch7,12",
+   "year": 2025
+  },
+  "Apple Watch Ultra 4": {
+   "account": {
+    "TitaniumSpBlk": "1-14"
+   },
+   "class": "Watch",
+   "colors": {
+    "Titanium - Black": "4E4949",
+    "Titanium - Natural": "A7A29C"
+   },
+   "edge": {
+    "1-14": "302d2c",
+    "1-8": "978e86"
+   },
+   "family": "Apple Watch",
+   "findmy": {
+    "1-14": "11de53bfc5",
+    "1-8": "5915766d77"
+   },
+   "ids": [
+    "Watch8,1"
+   ],
+   "name": "Apple Watch Ultra 4",
+   "rep": "Watch8,1",
+   "year": 2026
+  },
+  "HomePod (1st generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-dcdede": "2-2"
+   },
+   "class": "HomePod",
+   "colors": {
+    "Space Gray": "3B393B",
+    "White": "EBECEE"
+   },
+   "edge": {
+    "1-1": "323434",
+    "2-2": "d0d1d3"
+   },
+   "family": "HomePod",
+   "findmy": {
+    "1-1": "2c1bf9014b",
+    "2-2": "819d706a00"
+   },
+   "ids": [
+    "AudioAccessory1,1"
+   ],
+   "name": "HomePod (1st generation)",
+   "rep": "AudioAccessory1,1",
+   "year": 2018
+  },
+  "HomePod (1st generation, Unknown Model)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "e1e4e3-dcdede": null
+   },
+   "class": "HomePod",
+   "colors": {
+    "Space Gray": "3B393B",
+    "White": "EBECEE"
+   },
+   "edge": {
+    "3b3b3c-302f34": "323434",
+    "e1e4e3-dcdede": "d0d1d3"
+   },
+   "family": "HomePod",
+   "findmy": {},
+   "ids": [
+    "AudioAccessory1,2"
+   ],
+   "name": "HomePod (1st generation, Unknown Model)",
+   "rep": "AudioAccessory1,2",
+   "year": 2018
+  },
+  "HomePod (2nd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-dcdede": "2-2"
+   },
+   "class": "HomePod",
+   "colors": {
+    "Midnight": "232629",
+    "White": "D7D8DA"
+   },
+   "edge": {
+    "1-1": "5e6064",
+    "2-2": "b9babc"
+   },
+   "family": "HomePod",
+   "findmy": {
+    "1-1": "d81935d19d",
+    "2-2": "686918d375"
+   },
+   "ids": [
+    "AudioAccessory6,1"
+   ],
+   "name": "HomePod (2nd generation)",
+   "rep": "AudioAccessory6,1",
+   "year": 2023
+  },
+  "HomePod mini": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-99989b": null,
+    "e1e4e3-302f34": null,
+    "e1e4e3-dcdede": null
+   },
+   "class": "HomePod",
+   "colors": {
+    "Blue": "274B61",
+    "Midnight": "404145",
+    "Orange": "EB6D49",
+    "Space Gray": "3D4042",
+    "White": "E6E6E8",
+    "Yellow": "EAA626"
+   },
+   "edge": {
+    "1-1": "46494c",
+    "2-2": "dcdce1",
+    "3b3b3c-302f34": "47494b",
+    "3b3b3c-99989b": "47494b",
+    "e1e4e3-302f34": "d9dadc",
+    "e1e4e3-dcdede": "d9dadc"
+   },
+   "family": "HomePod",
+   "findmy": {
+    "1-1": "54503b045f",
+    "2-2": "6d78119c89"
+   },
+   "ids": [
+    "AudioAccessory5,1",
+    "AudioAccessorySingle5,1"
+   ],
+   "name": "HomePod mini",
+   "rep": "AudioAccessory5,1",
+   "year": 2020
+  },
+  "iPad (10th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "627E9C",
+    "Pink": "BE4D5F",
+    "Silver": "D0D1D3",
+    "Yellow": "CDB546"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-2": "000000",
+    "1-3": "000000",
+    "1-4": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "16d0324999",
+    "1-2": "864c176471",
+    "1-3": "fa432f0910",
+    "1-4": "56e10c391b"
+   },
+   "ids": [
+    "iPad13,18",
+    "iPad13,19"
+   ],
+   "name": "iPad (10th generation)",
+   "rep": "iPad13,18",
+   "year": 2022
+  },
+  "iPad (5th generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "e1e4e3-d6c8b9": null,
+    "e1e4e3-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "E7D0B5",
+    "Silver": "D0D1D3",
+    "Space Gray": "A1A2A7"
+   },
+   "edge": {
+    "1-1": "18191a",
+    "2-2": "edeeef",
+    "2-3": "f0efeb",
+    "3b3b3c-302f34": "171819",
+    "e1e4e3-d6c8b9": "f1ece8",
+    "e1e4e3-dcdede": "eceff0"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "72f0d43a00",
+    "2-2": "f83551a8aa",
+    "2-3": "d27aeafb7f"
+   },
+   "ids": [
+    "iPad6,11",
+    "iPad6,12"
+   ],
+   "name": "iPad (5th generation)",
+   "rep": "iPad6,11",
+   "year": 2017
+  },
+  "iPad (6th generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "e1e4e3-d6c8b9": null,
+    "e1e4e3-dcdede": null,
+    "e1e4e3-e5bdb5": null,
+    "e4e7e8-e4c1b9": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "EEC1AC",
+    "Silver": "D8D8DA",
+    "Space Gray": "A8A9AE"
+   },
+   "edge": {
+    "1-1": "171819",
+    "2-2": "eceff0",
+    "2-3": "f1efec",
+    "3b3b3c-302f34": "171819",
+    "e1e4e3-d6c8b9": "f1ece8",
+    "e1e4e3-dcdede": "eceff0",
+    "e1e4e3-e5bdb5": "f1ecec",
+    "e4e7e8-e4c1b9": "f1ecec"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "74d7d949ee",
+    "2-2": "1bc65bc3d5",
+    "2-3": "c8b8cd863a"
+   },
+   "ids": [
+    "iPad7,5",
+    "iPad7,6"
+   ],
+   "name": "iPad (6th generation)",
+   "rep": "iPad7,5",
+   "year": 2018
+  },
+  "iPad (7th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e5bdb5": "2-3"
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "EEC3AE",
+    "Silver": "CBCCCD",
+    "Space Gray": "505155"
+   },
+   "edge": {
+    "1-1": "171819",
+    "2-2": "eceff0",
+    "2-3": "f1efec"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "308b367f8c",
+    "2-2": "7376a2960b",
+    "2-3": "1f73a7cfd3"
+   },
+   "ids": [
+    "iPad7,11",
+    "iPad7,12"
+   ],
+   "name": "iPad (7th generation)",
+   "rep": "iPad7,11",
+   "year": 2019
+  },
+  "iPad (8th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e5bdb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "EEC1AE",
+    "Silver": "C7C7C9",
+    "Space Gray": "535458"
+   },
+   "edge": {
+    "1-1": "171819",
+    "2-2": "eceff0",
+    "2-3": "f1efec",
+    "e1e4e3-e5bdb5": "f0f0ed"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "03deaa759d",
+    "2-2": "d1a7636845",
+    "2-3": "d7f5152795"
+   },
+   "ids": [
+    "iPad11,6",
+    "iPad11,7"
+   ],
+   "name": "iPad (8th generation)",
+   "rep": "iPad11,6",
+   "year": 2020
+  },
+  "iPad (9th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "CCCDCF",
+    "Space Gray": "515155"
+   },
+   "edge": {
+    "1-1": "0d0d0d",
+    "1-2": "111111"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "b8168c1289",
+    "1-2": "5d1d24806a"
+   },
+   "ids": [
+    "iPad12,1",
+    "iPad12,2"
+   ],
+   "name": "iPad (9th generation)",
+   "rep": "iPad12,1",
+   "year": 2021
+  },
+  "iPad (A16)": {
+   "account": {
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "627E9C",
+    "Pink": "BE4D5F",
+    "Silver": "D0D1D3",
+    "Yellow": "CDB546"
+   },
+   "edge": {
+    "1-2": "000000",
+    "1-3": "000000",
+    "1-4": "000000",
+    "1-5": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-2": "16d0324999",
+    "1-3": "864c176471",
+    "1-4": "fa432f0910",
+    "1-5": "294bd195c2"
+   },
+   "ids": [
+    "iPad15,7",
+    "iPad15,8"
+   ],
+   "name": "iPad (A16)",
+   "rep": "iPad15,7",
+   "year": 2025
+  },
+  "iPad Air": {
+   "account": {
+    "3b3b3c-99989b": null,
+    "e1e4e3-d7d9d8": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "C4C6C5",
+    "Space Gray": "717075"
+   },
+   "edge": {
+    "3b3b3c-99989b": "202223",
+    "e1e4e3-d7d9d8": "f4f5f5"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad4,1",
+    "iPad4,2",
+    "iPad4,3"
+   ],
+   "name": "iPad Air",
+   "rep": "iPad4,1",
+   "year": 2013
+  },
+  "iPad Air (3rd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "3-2",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e5bdb5": "3-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "E6B8A3",
+    "Silver": "C5C6C7",
+    "Space Gray": "525359"
+   },
+   "edge": {
+    "1-1": "171819",
+    "2-2": "eceff0",
+    "3-2": "f0f0ed"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "f328969bbf",
+    "2-2": "6b5db819c3",
+    "3-2": "4daf2c79fc"
+   },
+   "ids": [
+    "iPad11,3",
+    "iPad11,4"
+   ],
+   "name": "iPad Air (3rd generation)",
+   "rep": "iPad11,3",
+   "year": 2019
+  },
+  "iPad Air (4th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Green": "B1C3AD",
+    "Rose Gold": "DAB0A8",
+    "Silver": "B7B8B9",
+    "Sky Blue": "ADBECB",
+    "Space Gray": "3E3F42"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-2": "000000",
+    "1-3": "020202",
+    "1-4": "010101",
+    "1-5": "010101"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "482f07e395",
+    "1-2": "5143299f2b",
+    "1-3": "555809fdac",
+    "1-4": "fc1d22cc6e",
+    "1-5": "b5f338ab54"
+   },
+   "ids": [
+    "iPad13,1",
+    "iPad13,2"
+   ],
+   "name": "iPad Air (4th generation)",
+   "rep": "iPad13,1",
+   "year": 2020
+  },
+  "iPad Air (5th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-6",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "648394",
+    "Pink": "B1A19C",
+    "Purple": "9695AB",
+    "Space Gray": "3E3C44",
+    "Starlight": "CCC6BF"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-3": "010101",
+    "1-4": "000000",
+    "1-6": "000000",
+    "1-7": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "482f07e395",
+    "1-3": "4a572b6ae3",
+    "1-4": "0d6ca5c253",
+    "1-6": "5143299f2b",
+    "1-7": "998c2ccede"
+   },
+   "ids": [
+    "iPad13,16",
+    "iPad13,17"
+   ],
+   "name": "iPad Air (5th generation)",
+   "rep": "iPad13,16",
+   "year": 2022
+  },
+  "iPad Air 11-inch (M2)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "BBCFD0",
+    "Purple": "CAC1CD",
+    "Space Gray": "5B5A5C",
+    "Starlight": "CAC4BA"
+   },
+   "edge": {
+    "1-1": "030303",
+    "1-4": "020202",
+    "1-6": "020202",
+    "1-7": "020202"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "e4d824e3b9",
+    "1-4": "41fa5e3690",
+    "1-6": "d323df4fbe",
+    "1-7": "773e482d4f"
+   },
+   "ids": [
+    "iPad14,8",
+    "iPad14,9"
+   ],
+   "name": "iPad Air 11-inch (M2)",
+   "rep": "iPad14,8",
+   "year": 2024
+  },
+  "iPad Air 11-inch (M3)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "AAC0C1",
+    "Purple": "C4BDC9",
+    "Space Gray": "515052",
+    "Starlight": "C2BBB1"
+   },
+   "edge": {
+    "1-1": "030303",
+    "1-4": "030303",
+    "1-6": "020202",
+    "1-7": "030303"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "234c04c8f6",
+    "1-4": "fd7bd2f2e4",
+    "1-6": "419321736c",
+    "1-7": "656db601da"
+   },
+   "ids": [
+    "iPad15,3",
+    "iPad15,4"
+   ],
+   "name": "iPad Air 11-inch (M3)",
+   "rep": "iPad15,3",
+   "year": 2025
+  },
+  "iPad Air 11-inch (M4)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-e5bdb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "BBCFD0",
+    "Purple": "CAC1CD",
+    "Space Gray": "5B5A5C",
+    "Starlight": "CAC4BA"
+   },
+   "edge": {
+    "1-1": "030303",
+    "1-4": "030303",
+    "1-6": "020202",
+    "1-7": "030303",
+    "3b3b3c-302f34": "030303",
+    "3b3b3c-e5bdb5": "030303"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "6211ccf481",
+    "1-4": "dccd05d8d6",
+    "1-6": "13dcd2f367",
+    "1-7": "8203cb324c"
+   },
+   "ids": [
+    "iPad16,8",
+    "iPad16,9"
+   ],
+   "name": "iPad Air 11-inch (M4)",
+   "rep": "iPad16,8",
+   "year": 2026
+  },
+  "iPad Air 13-inch (M2)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "BBCFD0",
+    "Purple": "CAC1CD",
+    "Space Gray": "5B5A5C",
+    "Starlight": "CAC4BA"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-4": "000000",
+    "1-6": "000000",
+    "1-7": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "6d6c3b0b6e",
+    "1-4": "d9217dc8e1",
+    "1-6": "62ae42b193",
+    "1-7": "ce84e76b3c"
+   },
+   "ids": [
+    "iPad14,10",
+    "iPad14,11"
+   ],
+   "name": "iPad Air 13-inch (M2)",
+   "rep": "iPad14,10",
+   "year": 2024
+  },
+  "iPad Air 13-inch (M3)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "AAC0C1",
+    "Purple": "C4BDC9",
+    "Space Gray": "515052",
+    "Starlight": "C2BBB1"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-4": "000000",
+    "1-6": "000000",
+    "1-7": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "5691864d9c",
+    "1-4": "6a309a99f0",
+    "1-6": "d59669b02f",
+    "1-7": "45ad4d095b"
+   },
+   "ids": [
+    "iPad15,5",
+    "iPad15,6"
+   ],
+   "name": "iPad Air 13-inch (M3)",
+   "rep": "iPad15,5",
+   "year": 2025
+  },
+  "iPad Air 13-inch (M4)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "BBCFD0",
+    "Purple": "CAC1CD",
+    "Space Gray": "5B5A5C",
+    "Starlight": "CAC4BA"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-4": "000000",
+    "1-6": "000000",
+    "1-7": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "5691864d9c",
+    "1-4": "6a309a99f0",
+    "1-6": "d59669b02f",
+    "1-7": "45ad4d095b"
+   },
+   "ids": [
+    "iPad16,10",
+    "iPad16,11"
+   ],
+   "name": "iPad Air 13-inch (M4)",
+   "rep": "iPad16,10",
+   "year": 2026
+  },
+  "iPad Air 2": {
+   "account": {
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D0B9A7",
+    "Silver": "CFD0D2",
+    "Space Gray": "9D9EA3"
+   },
+   "edge": {
+    "3b3b3c-b4b5b9": "18191a",
+    "e1e4e3-d7d9d8": "edeeef",
+    "e1e4e3-e1ccb5": "f1eeec"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad5,3",
+    "iPad5,4"
+   ],
+   "name": "iPad Air 2",
+   "rep": "iPad5,3",
+   "year": 2014
+  },
+  "iPad Pro (10.5-inch)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e5bdb5": "2-4",
+    "e4e7e8-e4c1b9": "2-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D2B99E",
+    "Rose Gold": "DDB3AD",
+    "Silver": "CBCCCD",
+    "Space Gray": "8F9195"
+   },
+   "edge": {
+    "1-1": "171819",
+    "2-2": "eceff0",
+    "2-3": "f1ece8",
+    "2-4": "f1ecec"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "29004199a6",
+    "2-2": "bf038e209b",
+    "2-3": "2e919851a4",
+    "2-4": "5b0b5b6fe0"
+   },
+   "ids": [
+    "iPad7,3",
+    "iPad7,4"
+   ],
+   "name": "iPad Pro (10.5-inch)",
+   "rep": "iPad7,3",
+   "year": 2017
+  },
+  "iPad Pro (12.9-inch) (1st generation)": {
+   "account": {
+    "3b3b3c-99989b": null,
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D7C1A9",
+    "Silver": "CFD1D0",
+    "Space Gray": "95999B"
+   },
+   "edge": {
+    "3b3b3c-99989b": "000000",
+    "3b3b3c-b4b5b9": "000000",
+    "e1e4e3-d7d9d8": "f7f7f7",
+    "e1e4e3-e1ccb5": "f6f7f9"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad6,7",
+    "iPad6,8"
+   ],
+   "name": "iPad Pro (12.9-inch) (1st generation)",
+   "rep": "iPad6,7",
+   "year": 2015
+  },
+  "iPad Pro (12.9-inch) (2nd generation)": {
+   "account": {
+    "3b3b3c-302f34": "2-2",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dcdede": "1-1"
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D4BCA1",
+    "Silver": "CACBCD",
+    "Space Gray": "919298"
+   },
+   "edge": {
+    "1-1": "f7f7f7",
+    "2-2": "000000",
+    "2-3": "f5f7f9"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "dfcfb950dc",
+    "2-2": "70072bf679",
+    "2-3": "89cf174518"
+   },
+   "ids": [
+    "iPad7,1",
+    "iPad7,2"
+   ],
+   "name": "iPad Pro (12.9-inch) (2nd generation)",
+   "rep": "iPad7,1",
+   "year": 2017
+  },
+  "iPad Pro (9.7-inch)": {
+   "account": {
+    "272728-b9b7ba": null,
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e4c1b9": null,
+    "e4e7e8-dadcdb": null,
+    "e4e7e8-e1ccb7": null,
+    "e4e7e8-e4c1b9": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D5BFA8",
+    "Rose Gold": "E0B8B0",
+    "Silver": "96979D",
+    "Space Gray": "919298"
+   },
+   "edge": {
+    "272728-b9b7ba": "18191a",
+    "3b3b3c-b4b5b9": "18191a",
+    "e1e4e3-d7d9d8": "edeeef",
+    "e1e4e3-e4c1b9": "f1ebeb",
+    "e4e7e8-dadcdb": "edeeef",
+    "e4e7e8-e1ccb7": "f1eeec",
+    "e4e7e8-e4c1b9": "f1ebeb"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad6,3",
+    "iPad6,4"
+   ],
+   "name": "iPad Pro (9.7-inch)",
+   "rep": "iPad6,3",
+   "year": 2016
+  },
+  "iPad Pro 11-inch": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "BEBFC0",
+    "Space Black": "262326"
+   },
+   "edge": {
+    "1-1": "070707",
+    "1-2": "0e0e0e",
+    "3b3b3c-302f34": "070707",
+    "3b3b3c-dcdede": "0e0e0e"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "f04f751f3c",
+    "1-2": "4e66ebdb54"
+   },
+   "ids": [
+    "iPad17,1",
+    "iPad17,2"
+   ],
+   "name": "iPad Pro 11-inch",
+   "rep": "iPad17,1",
+   "year": 2025
+  },
+  "iPad Pro 11-inch (1st generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "C4C4C6",
+    "Space Gray": "434448"
+   },
+   "edge": {
+    "1-1": "020202",
+    "1-2": "101010"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "64c4636696",
+    "1-2": "f7e6a35dfa"
+   },
+   "ids": [
+    "iPad8,1",
+    "iPad8,3",
+    "iPad8,2",
+    "iPad8,4"
+   ],
+   "name": "iPad Pro 11-inch (1st generation)",
+   "rep": "iPad8,1",
+   "year": 2018
+  },
+  "iPad Pro 11-inch (2nd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-2",
+    "3b3b3c-dcdede": "1-1"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "969798",
+    "Space Gray": "333438"
+   },
+   "edge": {
+    "1-1": "101010",
+    "1-2": "020202"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "2d0b947ad1",
+    "1-2": "6128058b37"
+   },
+   "ids": [
+    "iPad8,10",
+    "iPad8,9"
+   ],
+   "name": "iPad Pro 11-inch (2nd generation)",
+   "rep": "iPad8,10",
+   "year": 2020
+  },
+  "iPad Pro 11-inch (3rd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-2",
+    "3b3b3c-dcdede": "1-1"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "B4B5B6",
+    "Space Gray": "38383D"
+   },
+   "edge": {
+    "1-1": "101010",
+    "1-2": "020202"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "2d0b947ad1",
+    "1-2": "6128058b37"
+   },
+   "ids": [
+    "iPad13,4",
+    "iPad13,6",
+    "iPad13,5",
+    "iPad13,7"
+   ],
+   "name": "iPad Pro 11-inch (3rd generation)",
+   "rep": "iPad13,4",
+   "year": 2021
+  },
+  "iPad Pro 11-inch (4th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "B4B5B6",
+    "Space Gray": "4D4C4F"
+   },
+   "edge": {
+    "1-1": "020202",
+    "1-2": "101010"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "6128058b37",
+    "1-2": "2d0b947ad1"
+   },
+   "ids": [
+    "iPad14,3",
+    "iPad14,4"
+   ],
+   "name": "iPad Pro 11-inch (4th generation)",
+   "rep": "iPad14,3",
+   "year": 2022
+  },
+  "iPad Pro 11-inch (M4)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "BEBFC0",
+    "Space Black": "262326"
+   },
+   "edge": {
+    "1-1": "070707",
+    "1-2": "0e0e0e"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "77282bc5d6",
+    "1-2": "df5e93fcb5"
+   },
+   "ids": [
+    "iPad16,3",
+    "iPad16,4"
+   ],
+   "name": "iPad Pro 11-inch (M4)",
+   "rep": "iPad16,3",
+   "year": 2024
+  },
+  "iPad Pro 12.9-inch (3rd generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "B8B8BA",
+    "Space Gray": "383838"
+   },
+   "edge": {
+    "1-1": "010101",
+    "1-2": "0b0c0c",
+    "3b3b3c-302f34": "020202",
+    "3b3b3c-dcdede": "101010"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "e378cc5236",
+    "1-2": "840a1ba4e2"
+   },
+   "ids": [
+    "iPad8,5",
+    "iPad8,7",
+    "iPad8,6",
+    "iPad8,8"
+   ],
+   "name": "iPad Pro 12.9-inch (3rd generation)",
+   "rep": "iPad8,5",
+   "year": 2018
+  },
+  "iPad Pro 12.9-inch (4th generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": "1-1"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "919293",
+    "Space Gray": "343539"
+   },
+   "edge": {
+    "1-1": "101010",
+    "1-2": "010101",
+    "3b3b3c-302f34": "020202"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "2d0b947ad1",
+    "1-2": "c87f1ace5e"
+   },
+   "ids": [
+    "iPad8,11",
+    "iPad8,12"
+   ],
+   "name": "iPad Pro 12.9-inch (4th generation)",
+   "rep": "iPad8,11",
+   "year": 2020
+  },
+  "iPad Pro 12.9-inch (5th generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "B4B5B6",
+    "Space Gray": "343539"
+   },
+   "edge": {
+    "1-1": "0c0c0c",
+    "1-2": "010101",
+    "3b3b3c-302f34": "020202",
+    "3b3b3c-dcdede": "101010"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "4594eb6ba5",
+    "1-2": "c87f1ace5e"
+   },
+   "ids": [
+    "iPad13,10",
+    "iPad13,8",
+    "iPad13,9",
+    "iPad13,11"
+   ],
+   "name": "iPad Pro 12.9-inch (5th generation)",
+   "rep": "iPad13,10",
+   "year": 2021
+  },
+  "iPad Pro 12.9-inch (6th generation)": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "B8B8B8",
+    "Space Gray": "484848"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-2": "000000",
+    "3b3b3c-302f34": "020202",
+    "3b3b3c-dcdede": "101010"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "1f21c0e4e2",
+    "1-2": "c5cf44e0b3"
+   },
+   "ids": [
+    "iPad14,5",
+    "iPad14,6"
+   ],
+   "name": "iPad Pro 12.9-inch (6th generation)",
+   "rep": "iPad14,5",
+   "year": 2022
+  },
+  "iPad Pro 13-inch": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-dcdede": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "BEBFC0",
+    "Space Black": "262326"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-2": "000000",
+    "3b3b3c-302f34": "000000",
+    "3b3b3c-dcdede": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "2e0cda11ce",
+    "1-2": "341fae1423"
+   },
+   "ids": [
+    "iPad17,3",
+    "iPad17,4"
+   ],
+   "name": "iPad Pro 13-inch",
+   "rep": "iPad17,3",
+   "year": 2025
+  },
+  "iPad Pro 13-inch (M4)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "BEBFC0",
+    "Space Black": "262326"
+   },
+   "edge": {
+    "1-1": "000000",
+    "1-2": "000000"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "1d285c26ef",
+    "1-2": "bcfb23eacf"
+   },
+   "ids": [
+    "iPad16,5",
+    "iPad16,6"
+   ],
+   "name": "iPad Pro 13-inch (M4)",
+   "rep": "iPad16,5",
+   "year": 2024
+  },
+  "iPad mini (5th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e5bdb5": "2-3"
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "E8BCA7",
+    "Silver": "CACBCD",
+    "Space Gray": "5D5E62"
+   },
+   "edge": {
+    "1-1": "1b1d1e",
+    "2-2": "eceff0",
+    "2-3": "f1efec"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "124b3e5db0",
+    "2-2": "e84694ea47",
+    "2-3": "9f9fc082e3"
+   },
+   "ids": [
+    "iPad11,1",
+    "iPad11,2"
+   ],
+   "name": "iPad mini (5th generation)",
+   "rep": "iPad11,1",
+   "year": 2019
+  },
+  "iPad mini (6th generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-d6c8b9": "1-3"
+   },
+   "class": "iPad",
+   "colors": {
+    "Pink": "CAB8B8",
+    "Purple": "9898AB",
+    "Space Gray": "585858",
+    "Starlight": "CEC8B8"
+   },
+   "edge": {
+    "1-1": "030303",
+    "1-3": "020303",
+    "1-6": "030301",
+    "1-7": "10100f"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "50fb09b4bd",
+    "1-3": "fad44cebac",
+    "1-6": "d789f04d02",
+    "1-7": "92550aaafc"
+   },
+   "ids": [
+    "iPad14,1",
+    "iPad14,2"
+   ],
+   "name": "iPad mini (6th generation)",
+   "rep": "iPad14,1",
+   "year": 2021
+  },
+  "iPad mini (A17 Pro)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPad",
+   "colors": {
+    "Blue": "9FB6B8",
+    "Purple": "C4BCC8",
+    "Space Gray": "555456",
+    "Starlight": "CCC5BC"
+   },
+   "edge": {
+    "1-1": "161616",
+    "1-4": "232627",
+    "1-6": "21201f",
+    "1-7": "292729"
+   },
+   "family": "iPad",
+   "findmy": {
+    "1-1": "3950eb38d8",
+    "1-4": "4d12795ce2",
+    "1-6": "fe340afa6e",
+    "1-7": "dd7a664594"
+   },
+   "ids": [
+    "iPad16,1",
+    "iPad16,2"
+   ],
+   "name": "iPad mini (A17 Pro)",
+   "rep": "iPad16,1",
+   "year": 2024
+  },
+  "iPad mini 2": {
+   "account": {
+    "3b3b3c-99989b": null,
+    "e1e4e3-d7d9d8": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Silver": "CBCDCC",
+    "Space Gray": "A6A8AB"
+   },
+   "edge": {
+    "3b3b3c-99989b": "202223",
+    "e1e4e3-d7d9d8": "f4f5f5"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad4,4",
+    "iPad4,5",
+    "iPad4,6"
+   ],
+   "name": "iPad mini 2",
+   "rep": "iPad4,4",
+   "year": 2013
+  },
+  "iPad mini 3": {
+   "account": {
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D2BBA9",
+    "Silver": "D5D7D8",
+    "Space Gray": "A4A5AB"
+   },
+   "edge": {
+    "3b3b3c-b4b5b9": "202223",
+    "e1e4e3-d7d9d8": "e8e8e9",
+    "e1e4e3-e1ccb5": "eaddd3"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad4,7",
+    "iPad4,8",
+    "iPad4,9"
+   ],
+   "name": "iPad mini 3",
+   "rep": "iPad4,7",
+   "year": 2014
+  },
+  "iPad mini 4": {
+   "account": {
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPad",
+   "colors": {
+    "Gold": "D7C5AE",
+    "Silver": "D5D7D6",
+    "Space Gray": "B3B3B3"
+   },
+   "edge": {
+    "3b3b3c-b4b5b9": "202223",
+    "e1e4e3-d7d9d8": "eaebec",
+    "e1e4e3-e1ccb5": "f2f3f2"
+   },
+   "family": "iPad",
+   "findmy": {},
+   "ids": [
+    "iPad5,1",
+    "iPad5,2"
+   ],
+   "name": "iPad mini 4",
+   "rep": "iPad5,1",
+   "year": 2015
+  },
+  "iPhone 11": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-b4b5b9": "1-1",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "B6062A",
+    "Black": "1E1E1E",
+    "Green": "ABDDCA",
+    "Purple": "D7D1E0",
+    "White": "FBF9F2",
+    "Yellow": "FEE581"
+   },
+   "edge": {
+    "1-1": "36363a",
+    "1-11": "b3acc3",
+    "1-12": "a3c1b0",
+    "1-17": "b3acc3",
+    "1-18": "a3c1b0",
+    "1-2": "c9cacb",
+    "1-6": "cb4e55",
+    "1-7": "dac695"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "b2f2761b74",
+    "1-11": "2303216371",
+    "1-12": "a0d4034207",
+    "1-17": "a72977418f",
+    "1-18": "de3fbc2360",
+    "1-2": "6afdb5b90e",
+    "1-6": "1d221794bd",
+    "1-7": "d2678a0f8b"
+   },
+   "ids": [
+    "iPhone12,1"
+   ],
+   "name": "iPhone 11",
+   "rep": "iPhone12,1",
+   "year": 2019
+  },
+  "iPhone 11 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "F4D2B9",
+    "Midnight Green": "414A46",
+    "Silver": "E0E0D8",
+    "Space Gray": "3A3839"
+   },
+   "edge": {
+    "1-1": "363638",
+    "1-12": "5f7770",
+    "1-18": "5f7770",
+    "1-2": "7b7c7c",
+    "1-4": "616160"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "851592eb9a",
+    "1-12": "7fc739634f",
+    "1-18": "068790e9ab",
+    "1-2": "3bb803b1ba",
+    "1-4": "9f05ace5d9"
+   },
+   "ids": [
+    "iPhone12,3"
+   ],
+   "name": "iPhone 11 Pro",
+   "rep": "iPhone12,3",
+   "year": 2019
+  },
+  "iPhone 11 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "F4D2B9",
+    "Midnight Green": "414A46",
+    "Silver": "E0E0D8",
+    "Space Gray": "3A3839"
+   },
+   "edge": {
+    "1-1": "363638",
+    "1-12": "5f7770",
+    "1-18": "5f7770",
+    "1-2": "7b7c7c",
+    "1-4": "616160"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "2ef5553669",
+    "1-12": "71618d0bef",
+    "1-18": "ffebd03f26",
+    "1-2": "b22be55b00",
+    "1-4": "b23ca45023"
+   },
+   "ids": [
+    "iPhone12,5"
+   ],
+   "name": "iPhone 11 Pro Max",
+   "rep": "iPhone12,5",
+   "year": 2019
+  },
+  "iPhone 12": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-d6c8b9": null,
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "DF3434",
+    "Black": "221C24",
+    "Blue": "033356",
+    "Green": "DDF4D8",
+    "Purple": "AFA9DF",
+    "White": "FDF4F4"
+   },
+   "edge": {
+    "1-1": "1e1d21",
+    "1-12": "4d5b4b",
+    "1-17": "4a4465",
+    "1-18": "4d5b4b",
+    "1-2": "5f5b56",
+    "1-6": "6e171b",
+    "1-9": "121f32",
+    "3b3b3c-d6c8b9": "363638",
+    "3b3b3c-e5bdb5": "363638"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "326bfefdaa",
+    "1-12": "cc2bb0778e",
+    "1-17": "af15969138",
+    "1-18": "4379c88a30",
+    "1-2": "9ef84114d8",
+    "1-6": "9eb55521bf",
+    "1-9": "2d30ca25a7"
+   },
+   "ids": [
+    "iPhone13,2"
+   ],
+   "name": "iPhone 12",
+   "rep": "iPhone13,2",
+   "year": 2020
+  },
+  "iPhone 12 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": null,
+    "3b3b3c-ccc7d7": null,
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "FCEFD9",
+    "Graphite": "494846",
+    "Pacific Blue": "304B55",
+    "Silver": "F3F4F0"
+   },
+   "edge": {
+    "1-1": "21201d",
+    "1-2": "4f4f4d",
+    "1-3": "796c56",
+    "1-9": "142027",
+    "3b3b3c-a2d7c2": "363638",
+    "3b3b3c-ccc7d7": "363638",
+    "3b3b3c-e5bdb5": "363638"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "a00f20e89b",
+    "1-2": "a6cd6c35e3",
+    "1-3": "aca4ddf0a4",
+    "1-9": "31794c7218"
+   },
+   "ids": [
+    "iPhone13,3"
+   ],
+   "name": "iPhone 12 Pro",
+   "rep": "iPhone13,3",
+   "year": 2020
+  },
+  "iPhone 12 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "FCEFD9",
+    "Graphite": "494846",
+    "Pacific Blue": "304B55",
+    "Silver": "F3F4F0"
+   },
+   "edge": {
+    "1-1": "21201d",
+    "1-2": "4f4f4d",
+    "1-3": "796c56",
+    "1-9": "142027"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "d9e6f920c8",
+    "1-2": "eab37838c9",
+    "1-3": "2089c879b8",
+    "1-9": "0e16a67ab1"
+   },
+   "ids": [
+    "iPhone13,4"
+   ],
+   "name": "iPhone 12 Pro Max",
+   "rep": "iPhone13,4",
+   "year": 2020
+  },
+  "iPhone 12 mini": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "DF3434",
+    "Black": "221C24",
+    "Blue": "033356",
+    "Green": "DDF4D8",
+    "Purple": "AFA9DF",
+    "White": "FDF4F4"
+   },
+   "edge": {
+    "1-1": "252529",
+    "1-12": "6f7e6d",
+    "1-17": "665f88",
+    "1-18": "6f7e6d",
+    "1-2": "948f86",
+    "1-6": "952127",
+    "1-9": "24334a"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "bef8d25b4a",
+    "1-12": "ff61e7313a",
+    "1-17": "698d5d6887",
+    "1-18": "8484423b17",
+    "1-2": "3bf5b41e49",
+    "1-6": "a419437904",
+    "1-9": "8cbee00245"
+   },
+   "ids": [
+    "iPhone13,1"
+   ],
+   "name": "iPhone 12 mini",
+   "rep": "iPhone13,1",
+   "year": 2020
+  },
+  "iPhone 13": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "96060D",
+    "Blue": "235D7B",
+    "Green": "334434",
+    "Midnight": "151D23",
+    "Pink": "FCDDD8",
+    "Starlight": "F9F4EE"
+   },
+   "edge": {
+    "1-1": "16181a",
+    "1-18": "242921",
+    "1-2": "76736f",
+    "1-4": "5f5552",
+    "1-6": "340b0f",
+    "1-9": "2d4f65"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "0eaa56bb69",
+    "1-18": "f3cb93965f",
+    "1-2": "cd27c66602",
+    "1-4": "09d58581f5",
+    "1-6": "7e341c2656",
+    "1-9": "5ad58dd662"
+   },
+   "ids": [
+    "iPhone14,5"
+   ],
+   "name": "iPhone 13",
+   "rep": "iPhone14,5",
+   "year": 2021
+  },
+  "iPhone 13 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Alpine Green": "546554",
+    "Gold": "F6E4C7",
+    "Graphite": "4C4C4A",
+    "Sierra Blue": "93A9C0",
+    "Silver": "F1F1E7"
+   },
+   "edge": {
+    "1-1": "121211",
+    "1-18": "232926",
+    "1-2": "363634",
+    "1-3": "4b4132",
+    "1-9": "232b31"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "0e8203df40",
+    "1-18": "a8d6299371",
+    "1-2": "131bb45fcc",
+    "1-3": "fc6723417e",
+    "1-9": "2d0e584697"
+   },
+   "ids": [
+    "iPhone14,2"
+   ],
+   "name": "iPhone 13 Pro",
+   "rep": "iPhone14,2",
+   "year": 2021
+  },
+  "iPhone 13 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Alpine Green": "546554",
+    "Gold": "F6E4C7",
+    "Graphite": "4C4C4A",
+    "Sierra Blue": "93A9C0",
+    "Silver": "F1F1E7"
+   },
+   "edge": {
+    "1-1": "121211",
+    "1-18": "242b27",
+    "1-2": "363634",
+    "1-3": "4b4132",
+    "1-9": "232b31"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "493caeadf3",
+    "1-18": "ba31ff7c90",
+    "1-2": "3775f54533",
+    "1-3": "9d3e60afa3",
+    "1-9": "433e755e03"
+   },
+   "ids": [
+    "iPhone14,3"
+   ],
+   "name": "iPhone 13 Pro Max",
+   "rep": "iPhone14,3",
+   "year": 2021
+  },
+  "iPhone 13 mini": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "96060D",
+    "Blue": "235D7B",
+    "Green": "334434",
+    "Midnight": "151D23",
+    "Pink": "FCDDD8",
+    "Starlight": "F9F4EE"
+   },
+   "edge": {
+    "1-1": "1f2327",
+    "1-18": "283622",
+    "1-2": "8c8782",
+    "1-4": "847573",
+    "1-6": "5b1014",
+    "1-9": "2d4f65"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "38d65feeaa",
+    "1-18": "fc374c706e",
+    "1-2": "9b78b1881b",
+    "1-4": "df21c65b7d",
+    "1-6": "a2ae0916cf",
+    "1-9": "4c99ce3063"
+   },
+   "ids": [
+    "iPhone14,4"
+   ],
+   "name": "iPhone 13 mini",
+   "rep": "iPhone14,4",
+   "year": 2021
+  },
+  "iPhone 14": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "F80628",
+    "Blue": "A8B8C8",
+    "Midnight": "192928",
+    "Purple": "E8D8E8",
+    "Starlight": "F8F8E7",
+    "Yellow": "F8D868"
+   },
+   "edge": {
+    "1-1": "131416",
+    "1-17": "3a353c",
+    "1-2": "4b4946",
+    "1-6": "3a1016",
+    "1-7": "544c26",
+    "1-9": "313439"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "0126091242",
+    "1-17": "f72056043b",
+    "1-2": "2a81da1d22",
+    "1-6": "0c77e13449",
+    "1-7": "2e25dbf2ec",
+    "1-9": "6f617b95ef"
+   },
+   "ids": [
+    "iPhone14,7"
+   ],
+   "name": "iPhone 14",
+   "rep": "iPhone14,7",
+   "year": 2022
+  },
+  "iPhone 14 Plus": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "F80628",
+    "Blue": "A8B8C8",
+    "Midnight": "192928",
+    "Purple": "E8D8E8",
+    "Starlight": "F8F8E7",
+    "Yellow": "F8D868"
+   },
+   "edge": {
+    "1-1": "090a0b",
+    "1-17": "1c1a1d",
+    "1-2": "252422",
+    "1-6": "1c080b",
+    "1-7": "2d2916",
+    "1-9": "141618"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "0c92213f0d",
+    "1-17": "44697060e1",
+    "1-2": "2874ada410",
+    "1-6": "91359d6646",
+    "1-7": "e83bf9f893",
+    "1-9": "908f93e5d6"
+   },
+   "ids": [
+    "iPhone14,8"
+   ],
+   "name": "iPhone 14 Plus",
+   "rep": "iPhone14,8",
+   "year": 2022
+  },
+  "iPhone 14 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Deep Purple": "595261",
+    "Gold": "F3E6CC",
+    "Silver": "F0F2F2",
+    "Space Black": "3B3937"
+   },
+   "edge": {
+    "1-1": "0e0e0d",
+    "1-17": "29262d",
+    "1-2": "393a3a",
+    "1-3": "423c2e"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "1edf6760e6",
+    "1-17": "848697e342",
+    "1-2": "2ffe469312",
+    "1-3": "8a42678dd8"
+   },
+   "ids": [
+    "iPhone15,2"
+   ],
+   "name": "iPhone 14 Pro",
+   "rep": "iPhone15,2",
+   "year": 2022
+  },
+  "iPhone 14 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-ccc7d7": "1-17",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Deep Purple": "595261",
+    "Gold": "F3E6CC",
+    "Silver": "F0F2F2",
+    "Space Black": "3B3937"
+   },
+   "edge": {
+    "1-1": "272524",
+    "1-17": "0e0c0f",
+    "1-2": "131414",
+    "1-3": "16140f"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "99fbc03958",
+    "1-17": "7f019aae0e",
+    "1-2": "29e521283e",
+    "1-3": "203c73c962"
+   },
+   "ids": [
+    "iPhone15,3"
+   ],
+   "name": "iPhone 14 Pro Max",
+   "rep": "iPhone15,3",
+   "year": 2022
+  },
+  "iPhone 15": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "4E4F4E",
+    "Blue": "F3F8F8",
+    "Green": "F3F8E8",
+    "Pink": "FCE8E8",
+    "Yellow": "FCFBE4"
+   },
+   "edge": {
+    "1-1": "282929",
+    "1-18": "5a5c58",
+    "1-4": "625a5b",
+    "1-7": "615e55",
+    "1-9": "595c5e"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "f000c3473d",
+    "1-18": "b94816329d",
+    "1-4": "53985ff054",
+    "1-7": "da9f2dbf51",
+    "1-9": "67fd11d129"
+   },
+   "ids": [
+    "iPhone15,4"
+   ],
+   "name": "iPhone 15",
+   "rep": "iPhone15,4",
+   "year": 2023
+  },
+  "iPhone 15 Plus": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "4E4F4E",
+    "Blue": "F3F8F8",
+    "Green": "F3F8E8",
+    "Pink": "FCE8E8",
+    "Yellow": "FCFBE4"
+   },
+   "edge": {
+    "1-1": "1e1e1e",
+    "1-18": "3b3c3a",
+    "1-4": "3f3b3c",
+    "1-7": "3f3d39",
+    "1-9": "3b3c3d"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "29e18e48f3",
+    "1-18": "743bea45d9",
+    "1-4": "86d0d8dba3",
+    "1-7": "02467dafab",
+    "1-9": "bd02448b23"
+   },
+   "ids": [
+    "iPhone15,5"
+   ],
+   "name": "iPhone 15 Plus",
+   "rep": "iPhone15,5",
+   "year": 2023
+  },
+  "iPhone 15 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black Titanium": "464646",
+    "Blue Titanium": "545A66",
+    "Natural Titanium": "A6A29B",
+    "White Titanium": "EEEAE6"
+   },
+   "edge": {
+    "1-1": "363636",
+    "1-2": "51514f",
+    "1-5": "4e4c49",
+    "1-9": "35383e"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "65127ffb4f",
+    "1-2": "dba1b30f97",
+    "1-5": "bc667e3d60",
+    "1-9": "302bf7149f"
+   },
+   "ids": [
+    "iPhone16,1"
+   ],
+   "name": "iPhone 15 Pro",
+   "rep": "iPhone16,1",
+   "year": 2023
+  },
+  "iPhone 15 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black Titanium": "464646",
+    "Blue Titanium": "545A66",
+    "Natural Titanium": "A6A29B",
+    "White Titanium": "EEEAE6"
+   },
+   "edge": {
+    "1-1": "303030",
+    "1-2": "464644",
+    "1-5": "434240",
+    "1-9": "2e3036"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "41bc9d9550",
+    "1-2": "13645abff5",
+    "1-5": "1cb6037e41",
+    "1-9": "8cfdb1f2b5"
+   },
+   "ids": [
+    "iPhone16,2"
+   ],
+   "name": "iPhone 15 Pro Max",
+   "rep": "iPhone16,2",
+   "year": 2023
+  },
+  "iPhone 16": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "464747",
+    "Pink": "F1A8D8",
+    "Teal": "AFD4D2",
+    "Ultramarine": "94A6F1",
+    "White": "F7F7F5"
+   },
+   "edge": {
+    "1-1": "323333",
+    "1-18": "424f51",
+    "1-2": "696969",
+    "1-4": "614658",
+    "1-9": "464d63"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "eae78e6c9a",
+    "1-18": "db02779604",
+    "1-2": "2ac2d0683e",
+    "1-4": "9e8201ee24",
+    "1-9": "744aadea40"
+   },
+   "ids": [
+    "iPhone17,3"
+   ],
+   "name": "iPhone 16",
+   "rep": "iPhone17,3",
+   "year": 2024
+  },
+  "iPhone 16 Plus": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "464747",
+    "Pink": "F1A8D8",
+    "Teal": "AFD4D2",
+    "Ultramarine": "94A6F1",
+    "White": "F7F7F5"
+   },
+   "edge": {
+    "1-1": "313132",
+    "1-18": "3e4d50",
+    "1-2": "6f706f",
+    "1-4": "67455a",
+    "1-9": "424b69"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "cfaee2992d",
+    "1-18": "f2dc64dcdc",
+    "1-2": "678217a996",
+    "1-4": "14d4b2e50b",
+    "1-9": "ac9ab7ab32"
+   },
+   "ids": [
+    "iPhone17,4"
+   ],
+   "name": "iPhone 16 Plus",
+   "rep": "iPhone17,4",
+   "year": 2024
+  },
+  "iPhone 16 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-5"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black Titanium": "4F4F4F",
+    "Desert Titanium": "EBD8C8",
+    "Natural Titanium": "CBC7C0",
+    "White Titanium": "ECECEA"
+   },
+   "edge": {
+    "1-1": "202020",
+    "1-2": "5f5e5c",
+    "1-4": "5d5c58",
+    "1-5": "615954"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "770d40e343",
+    "1-2": "ebf1a1883e",
+    "1-4": "8de1742429",
+    "1-5": "540f317179"
+   },
+   "ids": [
+    "iPhone17,1"
+   ],
+   "name": "iPhone 16 Pro",
+   "rep": "iPhone17,1",
+   "year": 2024
+  },
+  "iPhone 16 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-5"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black Titanium": "4F4F4F",
+    "Desert Titanium": "EBD8C8",
+    "Natural Titanium": "CBC7C0",
+    "White Titanium": "ECECEA"
+   },
+   "edge": {
+    "1-1": "272727",
+    "1-2": "494948",
+    "1-4": "494745",
+    "1-5": "4a4643"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "ed6de4cf02",
+    "1-2": "61281df0f9",
+    "1-4": "a7984c4f44",
+    "1-5": "003f97c765"
+   },
+   "ids": [
+    "iPhone17,2"
+   ],
+   "name": "iPhone 16 Pro Max",
+   "rep": "iPhone17,2",
+   "year": 2024
+  },
+  "iPhone 16e": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "404040",
+    "White": "F6F6F4"
+   },
+   "edge": {
+    "1-1": "151515",
+    "1-2": "484847"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "ecc8199f9d",
+    "1-2": "76f85123cc"
+   },
+   "ids": [
+    "iPhone17,5"
+   ],
+   "name": "iPhone 16e",
+   "rep": "iPhone17,5",
+   "year": 2025
+  },
+  "iPhone 17": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-a2d7c2": "1-18",
+    "3b3b3c-ccc7d7": "1-2",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "464747",
+    "Lavender": "E7D7F2",
+    "Mist Blue": "A6BDDD",
+    "Sage": "BAC79C",
+    "White": "F7F7F5"
+   },
+   "edge": {
+    "1-1": "444444",
+    "1-18": "51564b",
+    "1-2": "5e5c60",
+    "1-9": "52565d"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "1a1d742a3f",
+    "1-18": "85a5bf47bb",
+    "1-2": "180d953607",
+    "1-9": "a1280bc74c"
+   },
+   "ids": [
+    "iPhone18,3"
+   ],
+   "name": "iPhone 17",
+   "rep": "iPhone18,3",
+   "year": 2025
+  },
+  "iPhone 17 Pro": {
+   "account": {
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Cosmic Orange": "F8833E",
+    "Deep Blue": "4A5680",
+    "Silver": "E7E7E7"
+   },
+   "edge": {
+    "1-2": "777676",
+    "1-8": "b07145",
+    "1-9": "414551"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-2": "62d54fb1ab",
+    "1-8": "b81be4b771",
+    "1-9": "6e1d86c8fc"
+   },
+   "ids": [
+    "iPhone18,1"
+   ],
+   "name": "iPhone 17 Pro",
+   "rep": "iPhone18,1",
+   "year": 2025
+  },
+  "iPhone 17 Pro Max": {
+   "account": {
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Cosmic Orange": "F8833E",
+    "Deep Blue": "4A5680",
+    "Silver": "E7E7E7"
+   },
+   "edge": {
+    "1-2": "3e3e3e",
+    "1-8": "946040",
+    "1-9": "3a3d46"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-2": "5575f7e58f",
+    "1-8": "28f313106a",
+    "1-9": "7f70cf8a1c"
+   },
+   "ids": [
+    "iPhone18,2"
+   ],
+   "name": "iPhone 17 Pro Max",
+   "rep": "iPhone18,2",
+   "year": 2025
+  },
+  "iPhone 17e": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "404040",
+    "Soft Pink": "FCE7E6",
+    "White": "F6F6F4"
+   },
+   "edge": {
+    "1-1": "323232",
+    "1-2": "2e2829"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "6118015478",
+    "1-2": "61856cf0bd"
+   },
+   "ids": [
+    "iPhone18,5"
+   ],
+   "name": "iPhone 17e",
+   "rep": "iPhone18,5",
+   "year": 2026
+  },
+  "iPhone 18 Pro": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "3C3C3C",
+    "Burgundy": "4D1822",
+    "Glacier": "E8F2FE",
+    "Silver": "F7F7F7"
+   },
+   "edge": {
+    "1-1": "2b2b2b",
+    "1-2": "605f5e",
+    "1-6": "423132",
+    "1-9": "5c6166"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "36a678b29f",
+    "1-2": "3a1ed5def8",
+    "1-6": "9a4dd2e7f6",
+    "1-9": "7592e301be"
+   },
+   "ids": [
+    "iPhone19,2"
+   ],
+   "name": "iPhone 18 Pro",
+   "rep": "iPhone19,2",
+   "year": 2026
+  },
+  "iPhone 18 Pro Max": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "3C3C3C",
+    "Burgundy": "4D1822",
+    "Glacier": "E8F2FE",
+    "Silver": "F7F7F7"
+   },
+   "edge": {
+    "1-1": "252525",
+    "1-2": "4a4a4a",
+    "1-9": "474a50"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "b5c19cae29",
+    "1-2": "003b50e384",
+    "1-9": "b18bcf6b6a"
+   },
+   "ids": [
+    "iPhone19,7"
+   ],
+   "name": "iPhone 18 Pro Max",
+   "rep": "iPhone19,7",
+   "year": 2026
+  },
+  "iPhone 18 Pro Max (US)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Black": "3C3C3C",
+    "Burgundy": "4D1822",
+    "Glacier": "E8F2FE",
+    "Silver": "F7F7F7"
+   },
+   "edge": {
+    "1-1": "252525",
+    "1-2": "4a4a4a",
+    "1-6": "34292a",
+    "1-9": "474a50"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "b5c19cae29",
+    "1-2": "003b50e384",
+    "1-6": "16ed039b48",
+    "1-9": "b18bcf6b6a"
+   },
+   "ids": [
+    "iPhone19,3"
+   ],
+   "name": "iPhone 18 Pro Max (US)",
+   "rep": "iPhone19,3",
+   "year": 2026
+  },
+  "iPhone 5c": {
+   "account": {
+    "3b3b3c-46abe0": null,
+    "3b3b3c-a1e877": null,
+    "3b3b3c-f5f4f7": null,
+    "3b3b3c-faf189": null,
+    "3b3b3c-fe767a": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Blue": "40B0EA",
+    "Green": "98E467",
+    "Pink": "FF6C6C",
+    "White": "F0F0F2",
+    "Yellow": "FFEF6F"
+   },
+   "edge": {
+    "3b3b3c-46abe0": "27a1e1",
+    "3b3b3c-a1e877": "8bde54",
+    "3b3b3c-f5f4f7": "e7e7e8",
+    "3b3b3c-faf189": "eed950",
+    "3b3b3c-fe767a": "f95b5b"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone5,3",
+    "iPhone5,4"
+   ],
+   "name": "iPhone 5c",
+   "rep": "iPhone5,3",
+   "year": 2013
+  },
+  "iPhone 5s": {
+   "account": {
+    "3b3b3c-99989b": null,
+    "e1e4e3-d4c5b3": null,
+    "e1e4e3-d7d9d8": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "CDBCA8",
+    "Silver": "C9CBCA",
+    "Space Gray": "757577"
+   },
+   "edge": {
+    "3b3b3c-99989b": "5a5a5e",
+    "e1e4e3-d4c5b3": "e2ded9",
+    "e1e4e3-d7d9d8": "dcddde"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone6,1",
+    "iPhone6,2"
+   ],
+   "name": "iPhone 5s",
+   "rep": "iPhone6,1",
+   "year": 2013
+  },
+  "iPhone 6": {
+   "account": {
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "D5BEAA",
+    "Silver": "DCDDDF",
+    "Space Gray": "9D9EA3"
+   },
+   "edge": {
+    "3b3b3c-b4b5b9": "6d6d72",
+    "e1e4e3-d7d9d8": "e3e3e4",
+    "e1e4e3-e1ccb5": "ebe3dd"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone7,2"
+   ],
+   "name": "iPhone 6",
+   "rep": "iPhone7,2",
+   "year": 2014
+  },
+  "iPhone 6 Plus": {
+   "account": {
+    "3b3b3c-b4b5b9": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "D5BEAA",
+    "Silver": "DCDDDF",
+    "Space Gray": "9D9EA3"
+   },
+   "edge": {
+    "3b3b3c-b4b5b9": "6d6d72",
+    "e1e4e3-d7d9d8": "e3e3e4",
+    "e1e4e3-e1ccb5": "ebe3dd"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone7,1"
+   ],
+   "name": "iPhone 6 Plus",
+   "rep": "iPhone7,1",
+   "year": 2014
+  },
+  "iPhone 6s": {
+   "account": {
+    "272728-b9b7ba": null,
+    "3b3b3c-b9b7ba": null,
+    "e1e4e3-dadcdb": null,
+    "e1e4e3-e1ccb7": null,
+    "e4e7e8-dadcdb": null,
+    "e4e7e8-e1ccb7": null,
+    "e4e7e8-e4c1b9": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "DAC2AA",
+    "Rose Gold": "E2B7B2",
+    "Silver": "D9D9DB",
+    "Space Gray": "A9AAAF"
+   },
+   "edge": {
+    "272728-b9b7ba": "48494c",
+    "3b3b3c-b9b7ba": "48494c",
+    "e1e4e3-dadcdb": "e2e2e3",
+    "e1e4e3-e1ccb7": "f0eae2",
+    "e4e7e8-dadcdb": "e2e2e3",
+    "e4e7e8-e1ccb7": "f0eae2",
+    "e4e7e8-e4c1b9": "f0d0d3"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone8,1"
+   ],
+   "name": "iPhone 6s",
+   "rep": "iPhone8,1",
+   "year": 2015
+  },
+  "iPhone 6s Plus": {
+   "account": {
+    "272728-b9b7ba": null,
+    "3b3b3c-b9b7ba": null,
+    "e1e4e3-dadcdb": null,
+    "e1e4e3-e1ccb7": null,
+    "e4e7e8-dadcdb": null,
+    "e4e7e8-e1ccb7": null,
+    "e4e7e8-e4c1b9": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "DAC2AA",
+    "Rose Gold": "E2B7B2",
+    "Silver": "D9D9DB",
+    "Space Gray": "A9AAAF"
+   },
+   "edge": {
+    "272728-b9b7ba": "434447",
+    "3b3b3c-b9b7ba": "434447",
+    "e1e4e3-dadcdb": "e2e2e3",
+    "e1e4e3-e1ccb7": "f0eae2",
+    "e4e7e8-dadcdb": "e2e2e3",
+    "e4e7e8-e1ccb7": "f0eae2",
+    "e4e7e8-e4c1b9": "ece5e6"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone8,2"
+   ],
+   "name": "iPhone 6s Plus",
+   "rep": "iPhone8,2",
+   "year": 2015
+  },
+  "iPhone 7": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "e1e4e3-d6c8b9": null,
+    "e1e4e3-dcdede": null,
+    "e1e4e3-e5bdb5": "2-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "AE2531",
+    "Black": "222326",
+    "Gold": "E8CEB7",
+    "Jet Black": "000000",
+    "Rose Gold": "E6BAB6",
+    "Silver": "CCCDCF"
+   },
+   "edge": {
+    "1-1": "48494c",
+    "1-5": "131313",
+    "2-2": "e0e0e1",
+    "2-3": "f0e2d0",
+    "2-4": "f0d0d3",
+    "2-6": "c42f32",
+    "3b3b3c-302f34": "424345",
+    "e1e4e3-d6c8b9": "f0eae2",
+    "e1e4e3-dcdede": "e2e2e3"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "31791994a6",
+    "1-5": "0db8f44d3a",
+    "2-2": "33cf5d43a3",
+    "2-3": "8d68adcba2",
+    "2-4": "0b8224f509",
+    "2-6": "9f46b6ed3b"
+   },
+   "ids": [
+    "iPhone9,1",
+    "iPhone9,3"
+   ],
+   "name": "iPhone 7",
+   "rep": "iPhone9,1",
+   "year": 2016
+  },
+  "iPhone 7 Plus": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "e1e4e3-d6c8b9": null,
+    "e1e4e3-dcdede": null,
+    "e1e4e3-e5bdb5": "2-4"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "AE2531",
+    "Black": "222326",
+    "Gold": "E8CEB7",
+    "Jet Black": "000000",
+    "Rose Gold": "E6BAB6",
+    "Silver": "CCCDCF"
+   },
+   "edge": {
+    "1-1": "434447",
+    "1-5": "202020",
+    "2-2": "eaeaea",
+    "2-3": "eceae5",
+    "2-4": "ece5e6",
+    "2-6": "dc9c9e",
+    "3b3b3c-302f34": "414145",
+    "e1e4e3-d6c8b9": "f0eae2",
+    "e1e4e3-dcdede": "e2e2e3"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "5c187f23b2",
+    "1-5": "ef953241d9",
+    "2-2": "f70d0f1a1d",
+    "2-3": "9b5cb93422",
+    "2-4": "7fe8d635ee",
+    "2-6": "c8bf9c7392"
+   },
+   "ids": [
+    "iPhone9,2",
+    "iPhone9,4"
+   ],
+   "name": "iPhone 7 Plus",
+   "rep": "iPhone9,2",
+   "year": 2016
+  },
+  "iPhone 8": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": null,
+    "e1e4e3-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "BB0F30",
+    "Gold": "F4E8DF",
+    "Silver": "E9EAEC",
+    "Space Gray": "262628"
+   },
+   "edge": {
+    "1-1": "424345",
+    "1-2": "e2e2e3",
+    "1-3": "f0e5d4",
+    "1-6": "a21c22",
+    "e1e4e3-d6c8b9": "f0eae2"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "ae81a5dc8b",
+    "1-2": "d96ee48ecb",
+    "1-3": "83dcff76f0",
+    "1-6": "89ca7b15f0"
+   },
+   "ids": [
+    "iPhone10,1",
+    "iPhone10,4"
+   ],
+   "name": "iPhone 8",
+   "rep": "iPhone10,1",
+   "year": 2017
+  },
+  "iPhone 8 Plus": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "e1e4e3-d6c8b9": "1-3",
+    "e1e4e3-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "BB0F30",
+    "Gold": "F4E8DF",
+    "Silver": "E9EAEC",
+    "Space Gray": "262628"
+   },
+   "edge": {
+    "1-1": "414145",
+    "1-2": "e2e2e3",
+    "1-3": "f0eae2",
+    "1-6": "94252b"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "e38fce0ac3",
+    "1-2": "c03ba062d5",
+    "1-3": "1b1bd38d30",
+    "1-6": "c384eaf747"
+   },
+   "ids": [
+    "iPhone10,2",
+    "iPhone10,5"
+   ],
+   "name": "iPhone 8 Plus",
+   "rep": "iPhone10,2",
+   "year": 2017
+  },
+  "iPhone Air": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-d6c8b9": "1-3",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Cloud White": "FCFCFC",
+    "Light Gold": "FAF2E5",
+    "Sky Blue": "E5F2FA",
+    "Space Black": "0E0E0E"
+   },
+   "edge": {
+    "1-1": "28282b",
+    "1-2": "4f4f4e",
+    "1-3": "504c3f",
+    "1-9": "464d53"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "fcf33767cd",
+    "1-2": "9e702fdeae",
+    "1-3": "85c08bd892",
+    "1-9": "89ce788d97"
+   },
+   "ids": [
+    "iPhone18,4"
+   ],
+   "name": "iPhone Air",
+   "rep": "iPhone18,4",
+   "year": 2025
+  },
+  "iPhone Duo": {
+   "account": {
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Night Sky": "394452",
+    "Star White": "F7F6F5"
+   },
+   "edge": {
+    "1-2": "858279",
+    "1-9": "374355"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-2": "ba10494c9d",
+    "1-9": "2f83c49a2a"
+   },
+   "ids": [
+    "iPhone19,4"
+   ],
+   "name": "iPhone Duo",
+   "rep": "iPhone19,4",
+   "year": 2026
+  },
+  "iPhone SE (1st generation)": {
+   "account": {
+    "121211-aeb1b8": null,
+    "3b3b3c-99989b": null,
+    "3b3b3c-b4b5b9": null,
+    "c8caca-d6c8b9": null,
+    "c8caca-dcdede": null,
+    "c8caca-e5bdb5": null,
+    "e1e4e3-d7d9d8": null,
+    "e1e4e3-e1ccb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "DBC3AB",
+    "Rose Gold": "DDB3B0",
+    "Silver": "CCCCCE",
+    "Space Gray": "9F9EA5"
+   },
+   "edge": {
+    "121211-aeb1b8": "5a5a5e",
+    "3b3b3c-99989b": "5a5a5e",
+    "3b3b3c-b4b5b9": "5a5a5e",
+    "c8caca-d6c8b9": "e2ded9",
+    "c8caca-dcdede": "dcddde",
+    "c8caca-e5bdb5": "e3d2d1",
+    "e1e4e3-d7d9d8": "dcddde",
+    "e1e4e3-e1ccb5": "e2ded9"
+   },
+   "family": "iPhone",
+   "findmy": {},
+   "ids": [
+    "iPhone8,4"
+   ],
+   "name": "iPhone SE (1st generation)",
+   "rep": "iPhone8,4",
+   "year": 2016
+  },
+  "iPhone SE (2nd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "AF0125",
+    "Black": "1D1D1F",
+    "White": "F1F1F1"
+   },
+   "edge": {
+    "1-1": "3f4244",
+    "1-2": "b1afac",
+    "1-6": "a33a42"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "fdcac5f7de",
+    "1-2": "6a86ca8019",
+    "1-6": "a4f170419a"
+   },
+   "ids": [
+    "iPhone12,8"
+   ],
+   "name": "iPhone SE (2nd generation)",
+   "rep": "iPhone12,8",
+   "year": 2020
+  },
+  "iPhone SE (3rd generation)": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2",
+    "3b3b3c-e5bdb5": "1-1"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "A10415",
+    "Midnight": "161E24",
+    "Starlight": "F7F2EE"
+   },
+   "edge": {
+    "1-1": "3f4244",
+    "1-2": "b1afac",
+    "1-6": "a33a42"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "368dde12bb",
+    "1-2": "28c8ea52ea",
+    "1-6": "27ea4154df"
+   },
+   "ids": [
+    "iPhone14,6"
+   ],
+   "name": "iPhone SE (3rd generation)",
+   "rep": "iPhone14,6",
+   "year": 2022
+  },
+  "iPhone X": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "Silver": "E3E3E1",
+    "Space Gray": "26272C"
+   },
+   "edge": {
+    "1-1": "606263",
+    "1-2": "7b7c7d"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "7396d411d7",
+    "1-2": "9f4af1da94"
+   },
+   "ids": [
+    "iPhone10,3",
+    "iPhone10,6"
+   ],
+   "name": "iPhone X",
+   "rep": "iPhone10,3",
+   "year": 2017
+  },
+  "iPhone XR": {
+   "account": {
+    "3b3b3c-302f34": "1-1",
+    "3b3b3c-47ade5": "1-9",
+    "3b3b3c-dcdede": "1-2"
+   },
+   "class": "iPhone",
+   "colors": {
+    "(PRODUCT)RED": "9A0114",
+    "Black": "212123",
+    "Blue": "45ACE7",
+    "Coral": "FD624E",
+    "White": "F9F9F9",
+    "Yellow": "F7CF49"
+   },
+   "edge": {
+    "1-1": "38383d",
+    "1-2": "cdcecf",
+    "1-6": "cd4c56",
+    "1-7": "e5ca96",
+    "1-8": "db8c82",
+    "1-9": "7ba5c0"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "4f07436d6f",
+    "1-2": "f23a17bd7e",
+    "1-6": "3859b7b06f",
+    "1-7": "e162aebad8",
+    "1-8": "b828314226",
+    "1-9": "5fc59cd1e7"
+   },
+   "ids": [
+    "iPhone11,8"
+   ],
+   "name": "iPhone XR",
+   "rep": "iPhone11,8",
+   "year": 2018
+  },
+  "iPhone XS": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-d6c8b9": null,
+    "3b3b3c-dcdede": null,
+    "3b3b3c-e5bdb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "FBDBC4",
+    "Silver": "E4E4E2",
+    "Space Gray": "222329"
+   },
+   "edge": {
+    "1-1": "5e5f61",
+    "1-2": "838485",
+    "1-4": "7e7a76",
+    "3b3b3c-302f34": "5e5f61",
+    "3b3b3c-d6c8b9": "7e7a76",
+    "3b3b3c-dcdede": "838485",
+    "3b3b3c-e5bdb5": "7e7a76"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "f010698d0c",
+    "1-2": "a2fbe4c159",
+    "1-4": "f67db3074b"
+   },
+   "ids": [
+    "iPhone11,2"
+   ],
+   "name": "iPhone XS",
+   "rep": "iPhone11,2",
+   "year": 2018
+  },
+  "iPhone XS Max": {
+   "account": {
+    "3b3b3c-302f34": null,
+    "3b3b3c-d6c8b9": null,
+    "3b3b3c-dcdede": null,
+    "3b3b3c-e5bdb5": null
+   },
+   "class": "iPhone",
+   "colors": {
+    "Gold": "FBDBC4",
+    "Silver": "E4E4E2",
+    "Space Gray": "222329"
+   },
+   "edge": {
+    "1-1": "5e5f61",
+    "1-2": "838485",
+    "1-4": "7e7a76",
+    "3b3b3c-302f34": "5e5f61",
+    "3b3b3c-d6c8b9": "7e7a76",
+    "3b3b3c-dcdede": "838485",
+    "3b3b3c-e5bdb5": "7e7a76"
+   },
+   "family": "iPhone",
+   "findmy": {
+    "1-1": "f010698d0c",
+    "1-2": "a2fbe4c159",
+    "1-4": "f67db3074b"
+   },
+   "ids": [
+    "iPhone11,4",
+    "iPhone11,6"
+   ],
+   "name": "iPhone XS Max",
+   "rep": "iPhone11,4",
+   "year": 2018
+  },
+  "iPod touch (6th generation)": {
+   "account": {
+    "e1e4e3-c6353f": null,
+    "e1e4e3-dadcdb": null,
+    "e1e4e3-e1ccb7": null
+   },
+   "class": "iPod",
+   "colors": {
+    "(PRODUCT)RED": "ED3033",
+    "Blue": "3278CF",
+    "Gold": "E1CDB5",
+    "Pink": "F83789",
+    "Silver": "CBCDCC",
+    "Space Gray": "606065"
+   },
+   "edge": {
+    "e1e4e3-c6353f": "e5cdcf",
+    "e1e4e3-dadcdb": "dcddde",
+    "e1e4e3-e1ccb7": "e0dfdd"
+   },
+   "family": "iPod touch",
+   "findmy": {},
+   "ids": [
+    "iPod7,1"
+   ],
+   "name": "iPod touch (6th generation)",
+   "rep": "iPod7,1",
+   "year": 2015
+  },
+  "iPod touch (7th generation)": {
+   "account": {
+    "e1e4e3-47ade5": "2-9",
+    "e1e4e3-c6353f": "2-6",
+    "e1e4e3-d6c8b9": "2-3",
+    "e1e4e3-dadcdb": "2-2",
+    "e1e4e3-dcdede": "2-2",
+    "e1e4e3-e1ccb7": "2-3",
+    "e1e4e3-e5bdb5": "2-4"
+   },
+   "class": "iPod",
+   "colors": {
+    "(PRODUCT)RED": "F2343B",
+    "Blue": "367DD1",
+    "Gold": "E0CCB5",
+    "Pink": "F23B8B",
+    "Silver": "CBCBCB",
+    "Space Gray": "57565C"
+   },
+   "edge": {
+    "1-5": "3b4144",
+    "2-2": "dcddde",
+    "2-3": "e0dfdd",
+    "2-4": "e4c2c2",
+    "2-6": "e5cdcf",
+    "2-9": "bfd1e1"
+   },
+   "family": "iPod touch",
+   "findmy": {
+    "1-5": "da18aa0085",
+    "2-2": "89604d60e5",
+    "2-3": "f57c611848",
+    "2-4": "981ef8efb8",
+    "2-6": "e205ba770a",
+    "2-9": "2fed102b4f"
+   },
+   "ids": [
+    "iPod9,1"
+   ],
+   "name": "iPod touch (7th generation)",
+   "rep": "iPod9,1",
+   "year": 2019
+  }
+ },
+ "samples": [
+  {
+   "code": "AlmBlue",
+   "model": "Watch6,8",
+   "name": "Blue"
+  },
+  {
+   "code": "TitaniumGold",
+   "model": "Watch7,10",
+   "name": "Titanium - Gold"
+  },
+  {
+   "code": "3b3b3c-a2d7c2",
+   "model": "iPhone13,1",
+   "name": "Green"
+  },
+  {
+   "code": "3b3b3c-dcdede",
+   "model": "iPhone16,1",
+   "name": "White Titanium"
+  },
+  {
+   "code": "3b3b3c-dcdede",
+   "model": "iPhone18,1",
+   "name": "Silver"
+  }
+ ]
+}
