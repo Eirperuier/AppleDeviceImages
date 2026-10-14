@@ -44,7 +44,7 @@ struct OSGeneration: Comparable, Hashable, Sendable, CustomStringConvertible {
 
     /// An Apple operating system, for turning its version into a generation.
     enum Platform: Sendable {
-        case iOS, iPadOS, macOS, watchOS, tvOS, visionOS, audioOS
+        case iOS, iPadOS, macOS, watchOS, tvOS, visionOS, audioOS, homeOS
 
         func releaseYear(of version: OperatingSystemVersion) -> Int? {
             let major = version.majorVersion
@@ -60,6 +60,8 @@ struct OSGeneration: Comparable, Hashable, Sendable, CustomStringConvertible {
                 return major + 2013
             case .visionOS:
                 return major + 2022
+            case .homeOS:
+                return nil  // first released as 27, in 2026
             }
         }
     }

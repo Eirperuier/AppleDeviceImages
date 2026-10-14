@@ -7,7 +7,7 @@ Every color of every iPhone, iPad, iPod touch, HomePod and Apple Watch since 201
 
 ✅ both codes known · ✅📱 confirmed on a real device · 🟡 the account code is missing · ❌ neither server has the color
 
-**304** ✅ · **122** 🟡 · **47** ❌
+**305** ✅ · **124** 🟡 · **44** ❌
 
 Color names come from [AppleDB](https://github.com/littlebyteorg/appledb) and are matched to codes by the color of the device's frame in the image, so check them against the pictures. Codes on real devices settle it.
 
@@ -36,7 +36,6 @@ Own one of these? [Send its image address](../CONTRIBUTING.md#add-a-color); it t
 | Apple Watch Series 9 | Silver, Stainless Steel - Gold, Stainless Steel - Graphite, Stainless Steel - Silver, Starlight |
 | Apple Watch (1st generation) | Gold - Yellow Gold, Silver, Stainless Steel - Silver, Stainless Steel - Space Black |
 | Apple Watch Series 8 | Stainless Steel - Gold, Stainless Steel - Graphite, Stainless Steel - Silver, Stainless Steel - Space Black |
-| HomePod mini | Blue, Orange, Space Gray, Yellow |
 | Apple Watch Series 11 | Silver, Titanium - Silver, Titanium - Slate |
 | Apple Watch Series 2 | Silver, Stainless Steel - Silver, Stainless Steel - Space Black |
 | iPod touch (6th generation) | Blue, Pink, Space Gray |
@@ -57,6 +56,7 @@ Own one of these? [Send its image address](../CONTRIBUTING.md#add-a-color); it t
 | Apple Watch Ultra | Titanium - Natural |
 | Apple Watch Ultra 2 | Titanium - Natural |
 | Apple Watch Ultra 4 | Titanium - Natural |
+| HomePod mini | Space Gray |
 | iPad (A16) | Yellow |
 | iPad Air (4th generation) | Green |
 | iPad Air (5th generation) | Blue |
@@ -82,12 +82,12 @@ Own one of these? [Send its image address](../CONTRIBUTING.md#add-a-color); it t
 | Apple Watch Series 3 | Gold, Silver, Space Gray, Stainless Steel - Space Black |
 | Apple Watch Series 5 | Silver, Stainless Steel - Gold, Stainless Steel - Silver, Stainless Steel - Space Black |
 | Apple Watch Series 8 | (PRODUCT)RED, Midnight, Silver, Starlight |
+| HomePod mini | Midnight, Orange, Yellow, White |
 | iPad Air 11-inch (M4) | Blue, Purple, Space Gray, Starlight |
 | iPad (5th generation) | Gold, Silver, Space Gray |
 | iPad (6th generation) | Gold, Silver, Space Gray |
 | Apple Watch Series 4 | Silver, Stainless Steel - Space Black |
 | Apple Watch Ultra 3 | Titanium - Black, Titanium - Natural |
-| HomePod mini | Midnight, White |
 | iPad Pro 11-inch | Silver, Space Black |
 | iPad Pro 12.9-inch (3rd generation) | Silver, Space Gray |
 | iPad Pro 12.9-inch (5th generation) | Silver, Space Gray |
@@ -1083,12 +1083,12 @@ Own one of these? [Send its image address](../CONTRIBUTING.md#add-a-color); it t
 
 | Color | Find My | Account | | Image |
 |---|---|---|---|---|
-| Blue | | | ❌ | |
 | Midnight | `1-1` |  | 🟡 | <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1-1-1-0/online-infobox__3x.png" height="60"> |
-| Orange | | | ❌ | |
+| Blue | `9-9` | `47ade5-47ade5` | ✅ | <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/HomePod/AudioAccessory5,1-47ade5-47ade5/online-infobox__3x.png" height="60"> |
+| Orange | `8-8` |  | 🟡 | <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1-8-8-0/online-infobox__3x.png" height="60"> |
+| Yellow | `7-7` |  | 🟡 | <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1-7-7-0/online-infobox__3x.png" height="60"> |
 | Space Gray | | | ❌ | |
 | White | `2-2` |  | 🟡 | <img src="https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1-2-2-0/online-infobox__3x.png" height="60"> |
-| Yellow | | | ❌ | |
 | *other* |  | `3b3b3c-302f34` | | <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/HomePod/AudioAccessory5,1-3b3b3c-302f34/online-infobox__3x.png" height="60"> |
 | *other* |  | `3b3b3c-99989b` | | <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/HomePod/AudioAccessory5,1-3b3b3c-99989b/online-infobox__3x.png" height="60"> |
 | *other* |  | `e1e4e3-302f34` | | <img src="https://appleid.cdn-apple.com/static/deviceImages-27.0/HomePod/AudioAccessory5,1-e1e4e3-302f34/online-infobox__3x.png" height="60"> |

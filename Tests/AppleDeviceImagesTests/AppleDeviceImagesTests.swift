@@ -93,6 +93,18 @@ import Testing
         #expect(urls == ["https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomePod/AudioAccessory5,1/online-infobox__3x.png"])
     }
 
+    @Test func homeViewTriesBothFolders() {
+        let urls = AppleDevice("HomeAccessory17,1", osVersion: "27.0").imageURLCandidates(scale: 3).map(\.absoluteString)
+        #expect(urls.prefix(2) == [
+            "https://appleid.cdn-apple.com/static/deviceImages-27.0/HomeView/HomeAccessory17,1/online-infobox__3x.png",
+            "https://appleid.cdn-apple.com/static/deviceImages-27.0/HomeAccessory/HomeAccessory17,1/online-infobox__3x.png",
+        ])
+        #expect(urls.suffix(2) == [
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomeView/HomeAccessory17,1/online-infobox__3x.png",
+            "https://statici.icloud.com/fmipmobile/deviceImages-9.0/HomeAccessory/HomeAccessory17,1/online-infobox__3x.png",
+        ])
+    }
+
     @Test func theCurrentDeviceHasAModelAndVersion() {
         let device = AppleDevice.current
         #expect(!device.model.isEmpty)

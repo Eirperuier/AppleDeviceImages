@@ -10,6 +10,8 @@ struct Product: Hashable, Sendable {
         case named(String)
         /// A HomePod (`AudioAccessory5,1`).
         case homePod
+        /// A HomeView hub (`HomeAccessory17,1`). Launched in 2026; which folder the CDNs file it under isn't known yet.
+        case homeView
         /// A Mac with a `MacNN,N` identifier; the account CDN files it under `Mac`, Find My under its family.
         case mac
         /// AirPods or Beats, by Bluetooth product ID.
@@ -24,6 +26,9 @@ struct Product: Hashable, Sendable {
         } else if letters == "AudioAccessory" {
             self.model = model
             self.kind = .homePod
+        } else if letters == "HomeAccessory" {
+            self.model = model
+            self.kind = .homeView
         } else if letters == "Mac" {
             self.model = model
             self.kind = .mac
@@ -38,6 +43,7 @@ struct Product: Hashable, Sendable {
         switch kind {
         case .mac: .macOS
         case .homePod: .audioOS
+        case .homeView: .homeOS
         case .audio: nil
         case .named(let family):
             switch family {
@@ -57,18 +63,20 @@ struct Product: Hashable, Sendable {
         switch kind {
         case .homePod: true
         case .named(let family): ["iPhone", "iPad", "iPod", "Watch"].contains(family)
-        case .mac, .audio: false
+        case .homeView, .mac, .audio: false
         }
     }
 
-    func accountFolder(color: String?) -> String {
-        let family = switch kind {
-        case .named(let family): family
-        case .homePod: "HomePod"
-        case .mac: "Mac"
-        case .audio: "AirPods"
+    /// Account CDN folders to try, best first.
+    func accountFolders(color: String?) -> [String] {
+        let families = switch kind {
+        case .named(let family): [family]
+        case .homePod: ["HomePod"]
+        case .homeView: Self.homeViewFamilies
+        case .mac: ["Mac"]
+        case .audio: ["AirPods"]
         }
-        return "\(family)/\(model)\(color.map { "-\($0)" } ?? "")"
+        return families.map { "\($0)/\(model)\(color.map { "-\($0)" } ?? "")" }
     }
 
     /// Find My folders to try: in the color first, then in the default one.
@@ -78,6 +86,8 @@ struct Product: Hashable, Sendable {
             ["\(family)/\(model)"]
         case .homePod:
             ["HomePod/\(model)"]
+        case .homeView:
+            Self.homeViewFamilies.map { "\($0)/\(model)" }
         case .mac:
             Self.macFamilies(model).map { "\($0)/\(model)" }
         case .audio(let productID):
@@ -87,6 +97,9 @@ struct Product: Hashable, Sendable {
         guard let color else { return folders }
         return folders.map { "\($0)-\(color)" } + folders
     }
+
+    /// Where HomeView may be filed: after the product, as HomePod is, or after its identifier.
+    private static let homeViewFamilies = ["HomeView", "HomeAccessory"]
 
     /// Find My's folders for a `MacNN,N` model: the one it was last found under first, then the rest.
     static func macFamilies(_ model: String) -> [String] {

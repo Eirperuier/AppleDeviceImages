@@ -55,9 +55,11 @@ extension AppleDevice {
         let file = "online-\(size.fileName)\(scale > 1 ? "__\(min(scale, 3))x" : "").png"
         var urls: [URL] = []
         if !product.accountNeedsColor || color.account != nil {
-            let folder = product.accountFolder(color: color.account)
+            let folders = product.accountFolders(color: color.account)
             for generation in generationOrder {
-                urls.append(URL(string: "https://appleid.cdn-apple.com/static/deviceImages-\(generation)/\(folder)/\(file)")!)
+                for folder in folders {
+                    urls.append(URL(string: "https://appleid.cdn-apple.com/static/deviceImages-\(generation)/\(folder)/\(file)")!)
+                }
             }
         }
         for folder in product.findMyFolders(color: color.findMy) {

@@ -8,7 +8,7 @@ import Foundation
 /// ```
 public struct AppleDevice: Hashable, Sendable {
     /// The model identifier: `iPhone18,1`, `iPad16,3`, `Mac16,1`, `Watch7,1`, `AppleTV14,1`, `AudioAccessory5,1`,
-    /// `RealityDevice14,1`, or for AirPods and Beats `Device1,<Bluetooth product ID>`.
+    /// `RealityDevice14,1`, `HomeAccessory17,1`, or for AirPods and Beats `Device1,<Bluetooth product ID>`.
     public var model: String
 
     /// The color as Apple encodes it, in any of its forms:

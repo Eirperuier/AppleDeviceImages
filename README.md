@@ -132,7 +132,7 @@ A device's own color can only be read through private API (MobileGestalt) or ove
 
 ## Coverage
 
-As checked in October 2026 against every model macOS 27 knows:
+As checked in October 2026 against every model macOS 27 knows, and the products launched on October 13:
 
 | Product line | OS wallpapers | Image | macOS icon |
 |---|---|---|---|
@@ -142,6 +142,9 @@ As checked in October 2026 against every model macOS 27 knows:
 | AirPods | most models | most models | ✓ |
 | Beats | | a few | ✓ |
 | Apple Pencil, AirTag, Studio Display | | | ✓ |
+| HomeView | not yet | not yet | |
+
+Neither CDN has the HomeView hub (`HomeAccessory17,1`, wall mounted `17,2`), the Apple TV 4K (4th generation, `AppleTV18,1`) or HomePod mini 2 (`AudioAccessory11,1`) yet; Apple adds images around when devices go on sale. The package already asks for them, trying both `HomeView` and `HomeAccessory` as HomeView's folder.
 
 > [!IMPORTANT]
 > The images come from Apple's servers through URLs Apple doesn't document, and they belong to Apple. They may change or disappear without notice. Check that your use is allowed before shipping it.

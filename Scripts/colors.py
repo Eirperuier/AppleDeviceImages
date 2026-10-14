@@ -125,7 +125,9 @@ def probe_account(data, p, codes, pool):
 def account_codes(data, p, housings=None, names=None):
     if p["family"] == "Apple Watch":
         return names if names is not None else watch_names(data)
-    return [f"{g}-{h}" for g in glasses(data, p) for h in (housings if housings is not None else data["palette"]["housing"])]
+    housings = housings if housings is not None else data["palette"]["housing"]
+    # HomePod mini's colored models have the same value on both sides (`47ade5-47ade5`).
+    return [f"{g}-{h}" for g in glasses(data, p) for h in housings] + [f"{h}-{h}" for h in housings]
 
 
 # Adding contributed codes
@@ -255,7 +257,8 @@ def scan(data, only):
             p["rep"] = p["ids"][0]
             p["class"] = "HomePod" if p["rep"].startswith("AudioAccessory") else FAMILIES[p["family"]]
             ranges = [(1, 45), (2, 45)] if p["family"] == "Apple Watch" else [(1, 41), (2, 41), (3, 41)]
-            codes = [f"{f}-{n}" for f, top in ranges for n in range(top)]
+            # HomePod mini numbers its colors on both sides (`9-9`), past the usual 1 to 3.
+            codes = [f"{f}-{n}" for f, top in ranges for n in range(top)] + [f"{n}-{n}" for n in range(4, 41)]
             images = dict(pool.map(lambda c: (c, fetch(findmy_url(p, c))), codes))
             p["findmy"], p["account"], p["edge"] = {}, {}, {}
             for c in codes:
