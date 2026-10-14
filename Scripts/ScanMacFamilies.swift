@@ -10,17 +10,19 @@ import Foundation
 let families = ["MacBookPro", "MacBookAir", "Macmini", "iMac", "MacStudio", "MacPro", "MacBook", "Mac"]
 
 func macModels() throws -> [String] {
-    let library = URL(fileURLWithPath: "/System/Library/CoreServices/CoreTypes.bundle/Contents/Library")
+    let contents = URL(fileURLWithPath: "/System/Library/CoreServices/CoreTypes.bundle/Contents")
+    let bundles = try FileManager.default.contentsOfDirectory(at: contents.appendingPathComponent("Library"),
+                                                              includingPropertiesForKeys: nil)
     var models = Set<String>()
-    for bundle in try FileManager.default.contentsOfDirectory(at: library, includingPropertiesForKeys: nil) {
-        let plist = bundle.appendingPathComponent("Contents/Info.plist")
+    for plist in [contents.appendingPathComponent("Info.plist")] + bundles.map({ $0.appendingPathComponent("Contents/Info.plist") }) {
         guard let data = try? Data(contentsOf: plist),
               let info = try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any],
               let types = info["UTExportedTypeDeclarations"] as? [[String: Any]] else { continue }
         for type in types {
             let tags = (type["UTTypeTagSpecification"] as? [String: Any])?["com.apple.device-model-code"]
             let codes = (tags as? [String]) ?? (tags as? String).map { [$0] } ?? []
-            for code in codes where code.hasPrefix("Mac") {
+            // Macs sold in several colors are only tagged with one: `Mac14,2@ECOLOR=7`.
+            for code in codes.map({ String($0.prefix { $0 != "@" }) }) where code.hasPrefix("Mac") {
                 let numbers = code.dropFirst(3).split(separator: ",")
                 if numbers.count == 2, numbers.allSatisfy({ Int($0) != nil }) { models.insert(code) }
             }

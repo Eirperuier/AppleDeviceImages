@@ -58,9 +58,10 @@ struct Product: Hashable, Sendable {
         }
     }
 
-    /// Whether only Find My has this product's colors: AirPods Max.
+    /// Whether only Find My has this product's colors: Macs and AirPods Max.
     var colorsOnlyOnFindMy: Bool {
-        if case .audio = kind { true } else { false }
+        if case .audio = kind { return true }
+        return platform == .macOS
     }
 
     /// Whether the account CDN only has this product in a color: iPhone, iPad, iPod, Apple Watch and HomePod.
@@ -85,8 +86,10 @@ struct Product: Hashable, Sendable {
     }
 
     /// Find My folders to try: in the color first, then in the default one.
-    /// AirPods colors are numbers after the product ID (`AirPods_8223-19`).
+    /// AirPods colors are numbers after the product ID (`AirPods_8223-19`); a Mac's number goes in the middle
+    /// (`Mac14,2-0-7-0`, as Find My has the Macs of 2021 and 2022).
     func findMyFolders(color: String?) -> [String] {
+        let color = platform == .macOS && color.flatMap(Int.init) != nil ? color.map { "0-\($0)-0" } : color
         let folders: [String] = switch kind {
         case .named(let family):
             // Find My files the iMac Pro with the iMacs; the account CDN under its own name.

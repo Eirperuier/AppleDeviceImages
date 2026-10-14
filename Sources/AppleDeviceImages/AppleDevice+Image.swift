@@ -48,28 +48,31 @@ extension AppleDevice {
 
     /// Every URL the image may be at, best first, without fetching any:
     /// Apple's account CDN at the device's OS generation, then older and newer generations,
-    /// then Find My's CDN in the device's color and in the default one.
+    /// then Find My's CDN in the device's color and in the default one. Macs and AirPods only come in color on
+    /// Find My, so for them a color puts Find My's image in that color first.
     public func imageURLCandidates(size: AppleDeviceImageSize = .large, scale: Int = defaultScale) -> [URL] {
         let product = Product(model: model)
         let color = parsedColor
         let file = "online-\(size.fileName)\(scale > 1 ? "__\(min(scale, 3))x" : "").png"
-        var urls: [URL] = []
-        let findMy = product.findMyFolders(color: color.findMy).map {
-            URL(string: "https://statici.icloud.com/fmipmobile/deviceImages-9.0/\($0)/\(file)")!
+        func findMy(_ folders: [String]) -> [URL] {
+            folders.map { URL(string: "https://statici.icloud.com/fmipmobile/deviceImages-9.0/\($0)/\(file)")! }
         }
-        // Without wallpapers to tell generations apart, a color only Find My has comes first.
-        if product.colorsOnlyOnFindMy, color.findMy != nil {
-            return findMy
-        }
-        if !product.accountNeedsColor || color.account != nil {
-            let folders = product.accountFolders(color: color.account)
+        let plain = product.findMyFolders(color: nil)
+        let colored = product.findMyFolders(color: color.findMy).filter { !plain.contains($0) }
+        var account: [URL] = []
+        let accountColor = product.colorsOnlyOnFindMy ? nil : color.account
+        if !product.accountNeedsColor || accountColor != nil {
+            let folders = product.accountFolders(color: accountColor)
             for generation in generationOrder {
                 for folder in folders {
-                    urls.append(URL(string: "https://appleid.cdn-apple.com/static/deviceImages-\(generation)/\(folder)/\(file)")!)
+                    account.append(URL(string: "https://appleid.cdn-apple.com/static/deviceImages-\(generation)/\(folder)/\(file)")!)
                 }
             }
         }
-        return urls + findMy
+        if product.colorsOnlyOnFindMy {
+            return findMy(colored) + account + findMy(plain)
+        }
+        return account + findMy(colored + plain)
     }
 
     /// The scale of this platform's screens: 2 on macOS, 3 elsewhere.

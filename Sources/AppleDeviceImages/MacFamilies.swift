@@ -3,9 +3,13 @@
 extension Product {
     /// Find My's family folder for each `MacNN,N` model.
     static let macFamily: [String: String] = [
+        "Mac13,1": "MacStudio",
+        "Mac13,2": "MacStudio",
+        "Mac14,2": "MacBookAir",
         "Mac14,3": "Macmini",
         "Mac14,5": "MacBookPro",
         "Mac14,6": "MacBookPro",
+        "Mac14,7": "MacBookPro",
         "Mac14,8": "MacPro",
         "Mac14,9": "MacBookPro",
         "Mac14,10": "MacBookPro",

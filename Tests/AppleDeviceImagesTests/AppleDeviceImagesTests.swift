@@ -101,12 +101,23 @@ import Testing
 
     @Test func airPodsMaxInAColorGoesToFindMy() {
         let urls = AppleDevice("Device1,8237", color: "19").imageURLCandidates(scale: 3).map(\.absoluteString)
-        #expect(urls == [
+        #expect(urls.prefix(3) == [
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8237-19/online-infobox__3x.png",
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/Beats_8237-19/online-infobox__3x.png",
+            "https://appleid.cdn-apple.com/static/deviceImages-27.0/AirPods/AirPods_8237/online-infobox__3x.png",
+        ])
+        #expect(urls.suffix(2) == [
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/AirPods_8237/online-infobox__3x.png",
             "https://statici.icloud.com/fmipmobile/deviceImages-9.0/Accessory/Beats_8237/online-infobox__3x.png",
         ])
+    }
+
+    @Test func aMacInAColorTriesFindMyInThatColorThenTheWallpapers() {
+        let urls = AppleDevice("Mac14,2", color: "7", osVersion: "15.0").imageURLCandidates(scale: 3).map(\.absoluteString)
+        #expect(urls[0] == "https://statici.icloud.com/fmipmobile/deviceImages-9.0/MacBookAir/Mac14,2-0-7-0/online-infobox__3x.png")
+        let firstAccount = urls.firstIndex { $0.hasPrefix("https://appleid") }!
+        #expect(urls[firstAccount] == "https://appleid.cdn-apple.com/static/deviceImages-14.0/Mac/Mac14,2/online-infobox__3x.png")
+        #expect(urls[..<firstAccount].allSatisfy { $0.contains("-0-7-0/") })
     }
 
     @Test func homeViewTriesBothFolders() {
@@ -170,6 +181,12 @@ struct NetworkTests {
         let xdr = try #require(AppleDevice("AppleDisplay18,1").systemIcon?.tiffRepresentation)
         let studio = try #require(AppleDevice("AppleDisplay18,2").systemIcon?.tiffRepresentation)
         #expect(xdr != studio)
+    }
+
+    @Test func aMacsIconComesInItsColor() throws {
+        let midnight = try #require(AppleDevice("Mac14,2", color: "7").systemIcon?.tiffRepresentation)
+        let starlight = try #require(AppleDevice("Mac14,2", color: "0-8-0").systemIcon?.tiffRepresentation)
+        #expect(midnight != starlight)
     }
 
     @Test func unknownModelHasNone() {

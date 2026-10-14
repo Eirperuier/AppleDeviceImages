@@ -123,7 +123,8 @@ Each product line encodes color its own way. Pass whichever code you have; the p
 | Apple Watch | material and color | `AlmPink`, `AlmSpGry`, `CeramicWhite` | Apple Account device lists |
 | Any, Find My images only | `DeviceColor`-`DeviceEnclosureColor` | `1-9` | MobileGestalt; Find My's `deviceColor`; the number in the macOS icon's name (`com.apple.iphone-17-pro-9.icns`) |
 | AirPods Max (USB-C, 2) | Find My's number | `19` | `18` Midnight, `19` Starlight, `20` Blue, `21` Orange, `22` Purple |
-| Mac, Apple TV, Vision Pro, other AirPods | none | | |
+| Mac | macOS's color number | `7` (MacBook Air M2, Midnight) | The `@ECOLOR=` in the model's icon tags in CoreTypes. Find My has the color for the Macs of 2021 and 2022 (as `0-7-0`), and `systemIcon` for every Mac sold in colors; the account CDN only has the default color. Intel Macs' icons use red, green and blue: `235,215,191` |
+| Apple TV, Vision Pro, other AirPods | none | | |
 
 The [color table](Colors/README.md) lists both codes for every color of every iPhone, iPad, iPod touch, HomePod and Apple Watch since 2013, with pictures. A few are still missing; if you own one, [adding it](CONTRIBUTING.md#add-a-color) takes a minute.
 

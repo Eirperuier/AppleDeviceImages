@@ -15,7 +15,7 @@ public struct AppleDevice: Hashable, Sendable {
     /// - `"3b3b3c-47ade5"`: cover glass and housing hex (iPhone, iPad, iPod, HomePod)
     /// - `"AlmPink"`: material and color (Apple Watch)
     /// - `"1-9-0"` or `"1-9"`: `DeviceColor` and `DeviceEnclosureColor` numbers (Find My)
-    /// - `"19"`: one number (Find My's AirPods Max colors)
+    /// - `"7"`: one number (Macs, as macOS's icons number their colors; AirPods Max)
     ///
     /// Without it the image shows the model's default color.
     public var color: String?
